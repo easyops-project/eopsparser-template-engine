@@ -1,0 +1,3 @@
+[submodule "lib/EasyOps-Native-Lib"]
+	path = lib/EasyOps-Native-Lib
+	url = https://github.com/alanj1998/EasyOps-Native-Lib
