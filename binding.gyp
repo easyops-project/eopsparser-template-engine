@@ -14,12 +14,14 @@
         ],
         'libraries': [
         ],
-        # 'conditions': [
-        #     ['OS=="mac"', {
-        #         'xcode_settings': {
-        #             'GCC_ENABLE_CPP_RTTI': 'YES'
-        #         }
-        #     }]],
+        'conditions': [
+            ['OS=="mac"', {
+                'xcode_settings': {
+                    'OTHER_CFLAGS': [
+                        "-std=c++17",
+                        "-stdlib=libc++"
+                    ],
+            }}]],
         'dependencies': [
             "<!(node -p \"require('node-addon-api').gyp\")"
         ],
