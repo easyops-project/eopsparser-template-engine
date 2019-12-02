@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node-gyp rebuild",
-    "clean": "node-gyp clean"
+    "build": "cmake-js compile",
+    "prebuild": "cmake-js build",
+    "test-run-changes": "cmake-js compile && node index.js"
   },
   "repository": {
     "type": "git",
@@ -21,8 +22,7 @@
   "homepage": "https://github.com/alanj1998/eopsparser-template-engine#readme",
   "devDependencies": {
     "glob": "^7.1.4",
-    "node-gyp": "^5.0.4",
-    "recursive-readdir-sync": "^1.0.6"
+    "cmake-js": "^6.0.0"
   },
   "dependencies": {
     "node-addon-api": "^1.7.1"

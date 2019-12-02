@@ -1,5 +1,5 @@
-#if !defined(EOPSTemplate)
-#define EOPSTemplate
+#if !defined(EOPSTemplate_HEADER)
+#define EOPSTemplate_HEADER
 
 #include "AWS/CloudFormationTemplate.hpp"
 #include <EOPSNativeLib/Helpers/ISerializable.hpp>
@@ -7,16 +7,18 @@
 
 using Json = nlohmann::json;
 
-namespace EOPSTemplateEngine {
-namespace Models {
-class EOPSTemplate {
-private:
-  EOPSTemplateEngine::AWS::CloudFormationTemplate AWS;
+namespace EOPSTemplateEngine::Models {
+    class EOPSTemplate {
+    private:
+        EOPSTemplateEngine::AWS::CloudFormationTemplate AWS;
 
-public:
-  Json ToJson();
-};
-} // namespace Models
-} // namespace EOPSTemplateEngine
+    public:
+        EOPSTemplate();
 
-#endif // EOPSTemplate
+        explicit EOPSTemplate(std::vector<EOPSNativeLib::Models::Resource *> resourcesToBeParsed);
+
+        Json ToJson();
+    };
+} // namespace EOPSTemplateEngine::Models
+
+#endif // EOPSTemplate_HEADER

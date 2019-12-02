@@ -6,14 +6,11 @@
 
 using Json = nlohmann::json;
 
-namespace EOPSTemplateEngine {
-namespace Generics {
-class GenericTemplate {
-public:
-  Json &CreateFromParserOutput(
-      std::vector<EOPSNativeLib::Models::Resource *> parsedResources);
-};
-} // namespace Generics
+namespace EOPSTemplateEngine::Generics {
+    class GenericTemplate {
+    public:
+        virtual void AddResource(EOPSNativeLib::Models::Resource *resource) = 0;
+    };
 } // namespace EOPSTemplateEngine
 
 #endif // GENERIC_TEMPLATE_HEADER
