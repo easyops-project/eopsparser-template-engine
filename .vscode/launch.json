@@ -1,0 +1,16 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug",
+      "preLaunchTask": "npm: build:dev",
+      "program": "/Users/alanj1998/.nvm/versions/node/v10.16.0/bin/node",
+      "args": ["/Users/alanj1998/Documents/College/project400/index.js"]
+    }
+  ]
+}

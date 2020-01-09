@@ -10,7 +10,7 @@ namespace EOPSTemplateEngine::AWS {
 
     Json GenericAWSResource::ToJson() {
         Json returnJson = Json::object();
-        returnJson["type"] = this->Type;
+        returnJson["Type"] = this->Type;
         return returnJson;
     }
 

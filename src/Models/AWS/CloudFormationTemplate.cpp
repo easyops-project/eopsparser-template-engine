@@ -19,15 +19,15 @@ namespace EOPSTemplateEngine::AWS {
 
         returnObject["Description"] = this->Description;
         returnObject["AWSTemplateFormatVersion"] = this->AWSTemplateFormatVersion;
-
+        Json resources = Json::object();
         for (const auto &[name, resource] : this->Resources) {
             Json newObj =
                     resource->ToJson(); // storing as pointers to objects THEREFORE get
             // the value from pointer (*resource) and apply to
             // JSON method on that entire object in mem
-            std::cout << newObj.dump() << std::endl;
-            returnObject[name] = newObj;
+            resources[name] = newObj;
         }
+        returnObject["Resources"] = resources;
 
         return returnObject;
     }
