@@ -6,14 +6,16 @@
 using Json = nlohmann::json;
 
 namespace EOPSTemplateEngine::AWS::EC2 {
-struct InstanceType {
-  std::string name;
-  float cpu;
-  float ram;
-};
+    struct InstanceType {
+        std::string name;
+        float cpu;
+        float ram;
+        bool isGPUEnabled;
+    };
 
-void from_json(const Json &j, InstanceType &s);
-bool sortByCpuAndRam(const InstanceType &a, const InstanceType &b);
+    void from_json(const Json &j, InstanceType &s);
+
+    bool sortByCpuAndRam(const InstanceType &a, const InstanceType &b);
 } // namespace EOPSTemplateEngine::AWS::EC2
 
 #endif // INSTANCE_TYPE_HEADER

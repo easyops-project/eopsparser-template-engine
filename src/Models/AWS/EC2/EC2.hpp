@@ -3,6 +3,7 @@
 
 #include "../GenericAWSResource.hpp"
 #include <EOPSNativeLib/Models/Resources/virtualMachine.hpp>
+#include "./ElasticGPUAccelerator.hpp"
 
 namespace EOPSTemplateEngine::AWS::EC2 {
     class CpuOption {
@@ -11,11 +12,6 @@ namespace EOPSTemplateEngine::AWS::EC2 {
         int ThreadsPerCore;
 
         Json ToJson();
-    };
-
-    class ElasticGpuSpecification {
-    private:
-        std::string type;
     };
 
     class ElasticVolume {
@@ -44,8 +40,7 @@ namespace EOPSTemplateEngine::AWS::EC2 {
 
         std::string AvailabilityZone; // check based on allowed values is needed here
         CpuOption CpuOptions;
-        const bool EbsOptimisied = true;
-        std::vector<ElasticGpuSpecification> ElasticGpuSpecifications;
+        std::vector<ElasticGPUAccelerator> ElasticGpuSpecifications;
         std::string ImageId; // need to do a check. look that bad boy up.
         std::string
                 InstanceType;
@@ -67,10 +62,7 @@ namespace EOPSTemplateEngine::AWS::EC2 {
 
         void setImageIdFromOsName(std::string osName);
 
-        void
-        setSecurityGroupFromRequirements(std::vector<std::string> &allowed_in, std::vector<std::string> &allowed_out);
-
-        void setInstanceTypeFromSpec(int cores, float ram, const std::string &optimisation);
+        void setInstanceTypeFromSpec(int cores, float ram, const std::string &optimisation, bool needsGPU);
 
     public:
         explicit Instance(std::string name);

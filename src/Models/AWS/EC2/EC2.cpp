@@ -4,7 +4,9 @@
 #include <iostream>
 
 namespace EOPSTemplateEngine::AWS::EC2 {
-    Instance::Instance(std::string name) : GenericAWSResource("AWS::EC2::Instance") {
+    Instance::Instance(std::string name)
+            : GenericAWSResource("AWS::EC2::Instance") {
+        this->CpuOptions = *new CpuOption();
         Tag t;
         t.Key = "Name";
         t.Value = name;
@@ -17,17 +19,33 @@ namespace EOPSTemplateEngine::AWS::EC2 {
         this->AvailabilityZone = aZone;
     }
 
-    void Instance::setGpuFromSpecification(int vram) {}
+    void Instance::setGpuFromSpecification(int vram) {
+        ElasticGPUAccelerator gpu;
+
+        if (vram != 1 && vram != 2 && vram != 4 && vram != 8) {
+//            std::cout << "Your GPU VRAM value is invalid. Will match to the closest value..." << std::endl;
+        }
+
+        if (vram <= 1) gpu.Type = "eg1.medium";
+        else if (vram <= 2) gpu.Type = "eg1.large";
+        else if (vram <= 4) gpu.Type = "eg1.xlarge";
+        else gpu.Type = "eg1.2xlarge";
+
+        this->ElasticGpuSpecifications.push_back(gpu);
+    }
 
     void Instance::setImageIdFromOsName(std::string osName) {}
 
     void Instance::setInstanceTypeFromSpec(int cores, float ram,
-                                           const std::string &optimisation) {
-//TODO: Consider how to pick most cost effective instances etc. May need extra fields for internet etc.
+                                           const std::string &optimisation, bool needsGPU) {
+        // TODO: Consider how to pick most cost effective instances etc. May need
+        // extra fields for internet etc.
         std::ifstream jsonFile;
         jsonFile.open(PATH_TO_JSON);
-        EC2::InstanceType *chosenInstance;
-        bool isFound = false;
+        auto *chosenInstance = new EC2::InstanceType();
+        std::cout << "Before " << cores << std::endl;
+        bool
+                isFound = false;
 
         if (jsonFile.is_open()) {
             Json j = Json::parse(jsonFile);
@@ -35,9 +53,15 @@ namespace EOPSTemplateEngine::AWS::EC2 {
 
             std::vector<EC2::InstanceType> instanceTypes = j.at(optimisation);
             std::sort(instanceTypes.begin(), instanceTypes.end(), sortByCpuAndRam);
-            for (struct InstanceType &instance: instanceTypes) {
+
+            for (struct InstanceType &instance : instanceTypes) {
+                if (needsGPU && !instance.isGPUEnabled) {
+                    continue;
+                }
                 if (instance.cpu >= float(cores) && instance.ram >= ram) {
-                    chosenInstance = &instance;
+                    chosenInstance->cpu = instance.cpu;
+                    chosenInstance->ram = instance.ram;
+                    chosenInstance->name = instance.name;
                     isFound = true;
                     break;
                 }
@@ -48,61 +72,74 @@ namespace EOPSTemplateEngine::AWS::EC2 {
                 std::cout << "Using: " << instanceTypes[0].name << std::endl;
                 chosenInstance = &instanceTypes[0];
             } else {
-                std::cout << "Chosen type: \n- " << chosenInstance->name << " \n- " << chosenInstance->cpu
-                          << " cpus \n- "
-                          << chosenInstance->ram << " GB Ram "
-                          << std::endl;
+                std::cout << "Chosen type: \n- " << chosenInstance->name << " \n- "
+                          << chosenInstance->cpu << " cpus \n- " << chosenInstance->ram
+                          << " GB Ram " << std::endl;
             }
         } else {
-            std::cout << "Error opening the json file. Creating t2.micro instance." << std::endl;
-            EC2::InstanceType *instance;
-            instance->name = "t2.micro";
-            chosenInstance = instance;
+            std::cout << "Error opening the json file. Creating t2.micro instance."
+                      << std::endl;
+            auto *errorInstance = new EC2::InstanceType();
+            errorInstance->name = "t2.micro";
+            chosenInstance = errorInstance;
         }
 
         this->InstanceType = chosenInstance->name;
         std::cout << chosenInstance->name << std::endl;
         std::cout << this->InstanceType << std::endl;
 
-        if (chosenInstance->cpu > cores) {
-            CpuOption c;
-            c.CoreCount = cores;
-            c.ThreadsPerCore = 1;
+        std::cout << "After " << cores << std::endl;
+        std::cout << "Setting " << chosenInstance->cpu << std::endl;
 
-            this->CpuOptions = c;
+        if (chosenInstance->cpu > cores) {
+            auto *c = new CpuOption();
+            c->CoreCount = cores;
+            c->ThreadsPerCore = 1;
+
+            this->CpuOptions = *c;
         }
     }
 
-    void Instance::setFromParsedResource(EOPSNativeLib::Models::VirtualMachine *res) {
+    void Instance::setFromParsedResource(
+            EOPSNativeLib::Models::VirtualMachine *res) {
         this->setAvailabilityZoneFromString(res->Location);
         this->setImageIdFromOsName(res->OS);
-        this->setInstanceTypeFromSpec(res->Cores, float(res->Ram), res->Optimisation);
+        this->setInstanceTypeFromSpec(res->Cores, float(res->Ram), res->Optimisation, !res->GPUs.empty());
+
+        for (auto const &gpu: res->GPUs) {
+            for (int i = 0; i < gpu.amount; ++i) {
+                this->setGpuFromSpecification(gpu.vram);
+            }
+        }
     }
 
     Json Instance::ToJson() {
         Json j = GenericAWSResource::ToJson();
+        Json properties = Json::object();
+
         if (this->CpuOptions.CoreCount != 0 || this->CpuOptions.ThreadsPerCore != 0) {
-            j["CPUOptions"] = this->CpuOptions.ToJson();
+            properties["CPUOptions"] = this->CpuOptions.ToJson();
         }
 
-        j["EbsOptimised"] = this->EbsOptimisied;
-//        j["ElasticGpuSpecifications"] = elasticGPUs;
-        j["ImageId"] = this->ImageId;
-        j["InstanceType"] = this->InstanceType;
-        j["KeyName"] = this->KeyName;
-        j["Monitoring"] = this->Monitoring;
-//        j["SecurityGroupIds"] = securityGroupIds;
-        j["SubnetId"] = this->SubnetId;
-//        j["Tags"] = tags;
-        j["UserData"] = this->UserData;
-//        j["Volumes"] = volumes;
-
+        if (!this->ElasticGpuSpecifications.empty()) {
+            Json gpus = Json::array();
+            for (auto const &gpu: this->ElasticGpuSpecifications) {
+                Json j;
+                j["Type"] = gpu.Type;
+                gpus.push_back(j);
+            }
+            properties["ElasticGpuSpecifications"] = gpus;
+        }
+//        j["ImageId"] = this->ImageId;
+        properties["InstanceType"] = this->InstanceType;
+//        j["KeyName"] = this->KeyName;
+        properties["Monitoring"] = this->Monitoring;
+//        j["SubnetId"] = this->SubnetId;
+        //        j["Tags"] = tags;
+//        j["UserData"] = this->UserData;
+        //        j["Volumes"] = volumes;
+        j["Properties"] = properties;
         return j;
-    }
-
-    void Instance::setSecurityGroupFromRequirements(std::vector<std::string> &allowed_in,
-                                                    std::vector<std::string> &allowed_out) {
-
     }
 
     Json CpuOption::ToJson() {

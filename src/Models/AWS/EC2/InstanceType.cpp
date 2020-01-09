@@ -5,6 +5,7 @@ namespace EOPSTemplateEngine::AWS::EC2 {
         s.cpu = j.at("cpu");
         s.ram = j.at("ram");
         s.name = j.at("name");
+        s.isGPUEnabled = j.at("isGPUEnabled");
     };
 
     bool sortByCpuAndRam(const InstanceType &a, const InstanceType &b) {
@@ -12,12 +13,6 @@ namespace EOPSTemplateEngine::AWS::EC2 {
             return true;
         } else if (b.cpu < a.cpu) {
             return false;
-        } else if (a.ram < b.ram) {
-            return true;
-        } else if (b.ram < a.ram) {
-            return false;
-        } else {
-            return false;
-        }
+        } else return a.ram < b.ram;
     };
 } // namespace EOPSTemplateEngine::AWS::EC2
