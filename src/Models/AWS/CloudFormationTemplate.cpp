@@ -1,5 +1,5 @@
 #include "CloudFormationTemplate.hpp"
-#include "EC2/InstanceType.hpp"
+#include "../Generics/InstanceType.hpp"
 #include "EC2/EC2.hpp"
 #include <iostream>
 

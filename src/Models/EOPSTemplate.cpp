@@ -13,6 +13,8 @@ namespace EOPSTemplateEngine::Models {
         for (EOPSNativeLib::Models::Resource *resource : resourcesToBeParsed) {
             if (resource->Provider == "aws") {
                 this->AWS.AddResource(resource);
+            } else if (resource->Provider == "azure") {
+                this->Azure.AddResource(resource);
             }
         }
     }

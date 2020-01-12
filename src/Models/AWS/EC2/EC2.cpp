@@ -1,11 +1,14 @@
 #include "EC2.hpp"
-#include "InstanceType.hpp"
+#include "../../Generics/InstanceType.hpp"
 #include <fstream>
 #include <iostream>
+//#include <aws/core/Aws.h>
+//#include <aws/EC2/EC2Client.h>
+//#include <aws/EC2/model/DescribeImagesRequest.h>
+//#include <aws/EC2/model/DescribeImagesOutcome.h>
 
 namespace EOPSTemplateEngine::AWS::EC2 {
-    Instance::Instance(std::string name)
-            : GenericAWSResource("AWS::EC2::Instance") {
+    Instance::Instance(std::string &name) : GenericAWSResource("AWS::EC2::Instance") {
         this->CpuOptions = *new CpuOption();
         Tag t;
         t.Key = "Name";
@@ -34,27 +37,29 @@ namespace EOPSTemplateEngine::AWS::EC2 {
         this->ElasticGpuSpecifications.push_back(gpu);
     }
 
-    void Instance::setImageIdFromOsName(std::string osName) {}
+    void Instance::setImageIdFromOsName(std::string osName) {
+//        Aws::EC2::EC2Client ec2;
+
+
+    }
 
     void Instance::setInstanceTypeFromSpec(int cores, float ram,
                                            const std::string &optimisation, bool needsGPU) {
         // TODO: Consider how to pick most cost effective instances etc. May need
         // extra fields for internet etc.
         std::ifstream jsonFile;
-        jsonFile.open(PATH_TO_JSON);
-        auto *chosenInstance = new EC2::InstanceType();
-        std::cout << "Before " << cores << std::endl;
-        bool
-                isFound = false;
+        jsonFile.open(AWS_INSTANCES);
+        auto *chosenInstance = new Generics::InstanceType();
+        bool isFound = false;
 
         if (jsonFile.is_open()) {
             Json j = Json::parse(jsonFile);
             jsonFile.close(); // closing the file straight away
 
-            std::vector<EC2::InstanceType> instanceTypes = j.at(optimisation);
-            std::sort(instanceTypes.begin(), instanceTypes.end(), sortByCpuAndRam);
+            std::vector<Generics::InstanceType> instanceTypes = j.at(optimisation);
+            std::sort(instanceTypes.begin(), instanceTypes.end(), Generics::sortByCpuAndRam);
 
-            for (struct InstanceType &instance : instanceTypes) {
+            for (struct Generics::InstanceType &instance : instanceTypes) {
                 if (needsGPU && !instance.isGPUEnabled) {
                     continue;
                 }
@@ -79,17 +84,12 @@ namespace EOPSTemplateEngine::AWS::EC2 {
         } else {
             std::cout << "Error opening the json file. Creating t2.micro instance."
                       << std::endl;
-            auto *errorInstance = new EC2::InstanceType();
+            auto *errorInstance = new Generics::InstanceType();
             errorInstance->name = "t2.micro";
             chosenInstance = errorInstance;
         }
 
         this->InstanceType = chosenInstance->name;
-        std::cout << chosenInstance->name << std::endl;
-        std::cout << this->InstanceType << std::endl;
-
-        std::cout << "After " << cores << std::endl;
-        std::cout << "Setting " << chosenInstance->cpu << std::endl;
 
         if (chosenInstance->cpu > cores) {
             auto *c = new CpuOption();
@@ -105,7 +105,7 @@ namespace EOPSTemplateEngine::AWS::EC2 {
         this->setAvailabilityZoneFromString(res->Location);
         this->setImageIdFromOsName(res->OS);
         this->setInstanceTypeFromSpec(res->Cores, float(res->Ram), res->Optimisation, !res->GPUs.empty());
-
+        this->AddDependencies(res->DependsOn);
         for (auto const &gpu: res->GPUs) {
             for (int i = 0; i < gpu.amount; ++i) {
                 this->setGpuFromSpecification(gpu.vram);

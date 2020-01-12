@@ -1,9 +1,13 @@
 #include <iostream>
+#include <utility>
 #include "./GenericAWSResource.hpp"
+#include <nlohmann/json.hpp>
+
+using Json = nlohmann::json;
 
 namespace EOPSTemplateEngine::AWS {
     GenericAWSResource::GenericAWSResource(std::string type) {
-        this->Type = type;
+        this->Type = std::move(type);
     };
 
     GenericAWSResource::GenericAWSResource() {};
@@ -11,16 +15,21 @@ namespace EOPSTemplateEngine::AWS {
     Json GenericAWSResource::ToJson() {
         Json returnJson = Json::object();
         returnJson["Type"] = this->Type;
+
+        if (!this->DependsOn.empty()) {
+            Json dependencies = Json::array();
+            for (auto const &str: this->DependsOn) {
+                dependencies.push_back(str);
+            }
+            returnJson["DependsOn"] = dependencies;
+        }
         return returnJson;
     }
 
-    void GenericAWSResource::AddDependency(std::string resourceName) {
-        this->DependsOn.push_back(resourceName);
-    }
-
-    void GenericAWSResource::setFromParsedResource(
-            EOPSNativeLib::Models::Resource *res) {
-        // uninstanciated as it's an interface but should be still invokable
+    void GenericAWSResource::AddDependencies(std::vector<std::string> &resources) {
+        for (const auto &res: resources) {
+            this->DependsOn.push_back(res);
+        }
     }
 
     GenericAWSResource::~GenericAWSResource() {

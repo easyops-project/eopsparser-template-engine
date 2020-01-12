@@ -1,0 +1,1797 @@
+{
+  "UBUNTU": [
+    {
+      "offer": "UbuntuServer",
+      "publisher": "Canonical",
+      "version": "latest"
+    },
+    {
+      "offer": "UbuntuServer",
+      "publisher": "Canonical",
+      "sku": "12.04.3-LTS",
+      "urn": "Canonical:UbuntuServer:12.04.3-LTS:12.04.201401300",
+      "version": "12.04.201401300"
+    },
+    {
+      "offer": "UbuntuServer",
+      "publisher": "Canonical",
+      "sku": "12.04.4-LTS",
+      "urn": "Canonical:UbuntuServer:12.04.4-LTS:12.04.201407170",
+      "version": "12.04.201407170"
+    },
+    {
+      "offer": "UbuntuServer",
+      "publisher": "Canonical",
+      "sku": "12.04.5-LTS",
+      "urn": "Canonical:UbuntuServer:12.04.5-LTS:12.04.201705020",
+      "version": "12.04.201705020"
+    },
+    {
+      "offer": "UbuntuServer",
+      "publisher": "Canonical",
+      "sku": "14.04.0-LTS",
+      "urn": "Canonical:UbuntuServer:14.04.0-LTS:14.04.201903120",
+      "version": "14.04.201903120"
+    },
+    {
+      "offer": "UbuntuServer",
+      "publisher": "Canonical",
+      "sku": "14.04.1-LTS",
+      "urn": "Canonical:UbuntuServer:14.04.1-LTS:14.04.201911070",
+      "version": "14.04.201911070"
+    },
+    {
+      "offer": "UbuntuServer",
+      "publisher": "Canonical",
+      "sku": "14.04.2-LTS",
+      "urn": "Canonical:UbuntuServer:14.04.2-LTS:14.04.201503090",
+      "version": "14.04.201503090"
+    },
+    {
+      "offer": "UbuntuServer",
+      "publisher": "Canonical",
+      "sku": "14.04.2-LTS",
+      "urn": "Canonical:UbuntuServer:14.04.2-LTS:14.04.201505060",
+      "version": "14.04.201505060"
+    },
+    {
+      "offer": "UbuntuServer",
+      "publisher": "Canonical",
+      "sku": "14.04.2-LTS",
+      "urn": "Canonical:UbuntuServer:14.04.2-LTS:14.04.201506100",
+      "version": "14.04.201506100"
+    },
+    {
+      "offer": "UbuntuServer",
+      "publisher": "Canonical",
+      "sku": "14.04.2-LTS",
+      "urn": "Canonical:UbuntuServer:14.04.2-LTS:14.04.201507060",
+      "version": "14.04.201507060"
+    },
+    {
+      "offer": "UbuntuServer",
+      "publisher": "Canonical",
+      "sku": "14.04.2-LTS",
+      "urn": "Canonical:UbuntuServer:14.04.2-LTS:14.04.201805220",
+      "version": "14.04.201805220"
+    },
+    {
+      "offer": "UbuntuServer",
+      "publisher": "Canonical",
+      "sku": "14.04.2-LTS",
+      "urn": "Canonical:UbuntuServer:14.04.2-LTS:14.04.201808180",
+      "version": "14.04.201808180"
+    },
+    {
+      "offer": "UbuntuServer",
+      "publisher": "Canonical",
+      "sku": "14.04.2-LTS",
+      "urn": "Canonical:UbuntuServer:14.04.2-LTS:14.04.201901221",
+      "version": "14.04.201901221"
+    },
+    {
+      "offer": "UbuntuServer",
+      "publisher": "Canonical",
+      "sku": "14.04.2-LTS",
+      "urn": "Canonical:UbuntuServer:14.04.2-LTS:14.04.201903150",
+      "version": "14.04.201903150"
+    },
+    {
+      "offer": "UbuntuServer",
+      "publisher": "Canonical",
+      "sku": "14.04.2-LTS",
+      "urn": "Canonical:UbuntuServer:14.04.2-LTS:14.04.201905140",
+      "version": "14.04.201905140"
+    },
+    {
+      "offer": "UbuntuServer",
+      "publisher": "Canonical",
+      "sku": "14.04.2-LTS",
+      "urn": "Canonical:UbuntuServer:14.04.2-LTS:14.04.201911070",
+      "version": "14.04.201911070"
+    },
+    {
+      "offer": "UbuntuServer",
+      "publisher": "Canonical",
+      "sku": "14.04.3-LTS",
+      "urn": "Canonical:UbuntuServer:14.04.3-LTS:14.04.201911070",
+      "version": "14.04.201911070"
+    },
+    {
+      "offer": "UbuntuServer",
+      "publisher": "Canonical",
+      "sku": "14.04.4-LTS",
+      "urn": "Canonical:UbuntuServer:14.04.4-LTS:14.04.201911070",
+      "version": "14.04.201911070"
+    },
+    {
+      "offer": "UbuntuServer",
+      "publisher": "Canonical",
+      "sku": "14.04.5-LTS",
+      "urn": "Canonical:UbuntuServer:14.04.5-LTS:14.04.201911070",
+      "version": "14.04.201911070"
+    },
+    {
+      "offer": "UbuntuServer",
+      "publisher": "Canonical",
+      "sku": "16.04.0-LTS",
+      "urn": "Canonical:UbuntuServer:16.04.0-LTS:16.04.202001070",
+      "version": "16.04.202001070"
+    },
+    {
+      "offer": "UbuntuServer",
+      "publisher": "Canonical",
+      "sku": "18.04-LTS",
+      "urn": "Canonical:UbuntuServer:18.04-LTS:18.04.201912180",
+      "version": "18.04.201912180"
+    },
+    {
+      "offer": "UbuntuServer",
+      "publisher": "Canonical",
+      "sku": "19.04",
+      "urn": "Canonical:UbuntuServer:19.04:19.04.201911131",
+      "version": "19.04.201911131"
+    }
+  ],
+  "CENTOS": [
+    {
+      "offer": "CentOS",
+      "publisher": "OpenLogic",
+      "sku": "7.5",
+      "urn": "OpenLogic:CentOS:7.5:latest",
+      "urnAlias": "CentOS",
+      "version": "latest"
+    },
+    {
+      "offer": "CentOS",
+      "publisher": "OpenLogic",
+      "sku": "6.10",
+      "urn": "OpenLogic:CentOS:6.10:6.10.20191209",
+      "version": "6.10.20191209"
+    },
+    {
+      "offer": "CentOS",
+      "publisher": "OpenLogic",
+      "sku": "6.5",
+      "urn": "OpenLogic:CentOS:6.5:6.5.20170207",
+      "version": "6.5.20170207"
+    },
+    {
+      "offer": "CentOS",
+      "publisher": "OpenLogic",
+      "sku": "6.6",
+      "urn": "OpenLogic:CentOS:6.6:6.6.20160309",
+      "version": "6.6.20160309"
+    },
+    {
+      "offer": "CentOS",
+      "publisher": "OpenLogic",
+      "sku": "6.7",
+      "urn": "OpenLogic:CentOS:6.7:6.7.20160310",
+      "version": "6.7.20160310"
+    },
+    {
+      "offer": "CentOS",
+      "publisher": "OpenLogic",
+      "sku": "6.8",
+      "urn": "OpenLogic:CentOS:6.8:6.8.20170517",
+      "version": "6.8.20170517"
+    },
+    {
+      "offer": "CentOS",
+      "publisher": "OpenLogic",
+      "sku": "6.9",
+      "urn": "OpenLogic:CentOS:6.9:6.9.20180530",
+      "version": "6.9.20180530"
+    },
+    {
+      "offer": "CentOS",
+      "publisher": "OpenLogic",
+      "sku": "7.0",
+      "urn": "OpenLogic:CentOS:7.0:7.0.20160309",
+      "version": "7.0.20160309"
+    },
+    {
+      "offer": "CentOS",
+      "publisher": "OpenLogic",
+      "sku": "7.1",
+      "urn": "OpenLogic:CentOS:7.1:7.1.20160308",
+      "version": "7.1.20160308"
+    },
+    {
+      "offer": "CentOS",
+      "publisher": "OpenLogic",
+      "sku": "7.2",
+      "urn": "OpenLogic:CentOS:7.2:7.2.20170517",
+      "version": "7.2.20170517"
+    },
+    {
+      "offer": "CentOS",
+      "publisher": "OpenLogic",
+      "sku": "7.2n",
+      "urn": "OpenLogic:CentOS:7.2n:7.2.20160629",
+      "version": "7.2.20160629"
+    },
+    {
+      "offer": "CentOS",
+      "publisher": "OpenLogic",
+      "sku": "7.3",
+      "urn": "OpenLogic:CentOS:7.3:7.3.20170925",
+      "version": "7.3.20170925"
+    },
+    {
+      "offer": "CentOS",
+      "publisher": "OpenLogic",
+      "sku": "7.4",
+      "urn": "OpenLogic:CentOS:7.4:7.4.20180704",
+      "version": "7.4.20180704"
+    },
+    {
+      "offer": "CentOS",
+      "publisher": "OpenLogic",
+      "sku": "7.5",
+      "urn": "OpenLogic:CentOS:7.5:7.5.20180815",
+      "version": "7.5.20180815"
+    },
+    {
+      "offer": "CentOS",
+      "publisher": "OpenLogic",
+      "sku": "7.6",
+      "urn": "OpenLogic:CentOS:7.6:7.6.20190808",
+      "version": "7.6.20190808"
+    },
+    {
+      "offer": "CentOS",
+      "publisher": "OpenLogic",
+      "sku": "7.7",
+      "urn": "OpenLogic:CentOS:7.7:7.7.20191209",
+      "version": "7.7.20191209"
+    },
+    {
+      "offer": "CentOS",
+      "publisher": "OpenLogic",
+      "sku": "8.0",
+      "urn": "OpenLogic:CentOS:8.0:8.0.20191206",
+      "version": "8.0.20191206"
+    },
+    {
+      "offer": "CentOS-CI",
+      "publisher": "OpenLogic",
+      "sku": "7-CI",
+      "urn": "OpenLogic:CentOS-CI:7-CI:7.7.20191209",
+      "version": "7.7.20191209"
+    },
+    {
+      "offer": "CentOS-HPC",
+      "publisher": "OpenLogic",
+      "sku": "6.5",
+      "urn": "OpenLogic:CentOS-HPC:6.5:6.5.20180301",
+      "version": "6.5.20180301"
+    },
+    {
+      "offer": "CentOS-HPC",
+      "publisher": "OpenLogic",
+      "sku": "6.8",
+      "urn": "OpenLogic:CentOS-HPC:6.8:6.8.20180301",
+      "version": "6.8.20180301"
+    },
+    {
+      "offer": "CentOS-HPC",
+      "publisher": "OpenLogic",
+      "sku": "7.1",
+      "urn": "OpenLogic:CentOS-HPC:7.1:7.1.20180301",
+      "version": "7.1.20180301"
+    },
+    {
+      "offer": "CentOS-HPC",
+      "publisher": "OpenLogic",
+      "sku": "7.3",
+      "urn": "OpenLogic:CentOS-HPC:7.3:7.3.20180301",
+      "version": "7.3.20180301"
+    },
+    {
+      "offer": "CentOS-HPC",
+      "publisher": "OpenLogic",
+      "sku": "7.4",
+      "urn": "OpenLogic:CentOS-HPC:7.4:7.4.20180719",
+      "version": "7.4.20180719"
+    },
+    {
+      "offer": "CentOS-HPC",
+      "publisher": "OpenLogic",
+      "sku": "7.6",
+      "urn": "OpenLogic:CentOS-HPC:7.6:7.6.20191025",
+      "version": "7.6.20191025"
+    },
+    {
+      "offer": "CentOS-HPC",
+      "publisher": "OpenLogic",
+      "sku": "7.7",
+      "urn": "OpenLogic:CentOS-HPC:7.7:7.7.20191023",
+      "version": "7.7.20191023"
+    },
+    {
+      "offer": "CentOS-LVM",
+      "publisher": "OpenLogic",
+      "sku": "7-LVM",
+      "urn": "OpenLogic:CentOS-LVM:7-LVM:7.7.20191209",
+      "version": "7.7.20191209"
+    },
+    {
+      "offer": "CentOS-SRIOV",
+      "publisher": "OpenLogic",
+      "sku": "7.3-SRIOV",
+      "urn": "OpenLogic:CentOS-SRIOV:7.3-SRIOV:7.3.20171005",
+      "version": "7.3.20171005"
+    }
+  ],
+  "COREOS": [
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:latest",
+      "urnAlias": "CoreOS",
+      "version": "latest"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1010.5.0",
+      "version": "1010.5.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1010.6.0",
+      "version": "1010.6.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1068.6.0",
+      "version": "1068.6.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1068.8.0",
+      "version": "1068.8.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1068.9.0",
+      "version": "1068.9.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1122.2.0",
+      "version": "1122.2.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1122.3.0",
+      "version": "1122.3.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1185.3.0",
+      "version": "1185.3.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1185.5.0",
+      "version": "1185.5.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1235.12.0",
+      "version": "1235.12.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1235.5.0",
+      "version": "1235.5.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1235.6.0",
+      "version": "1235.6.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1235.8.0",
+      "version": "1235.8.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1235.9.0",
+      "version": "1235.9.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1298.5.0",
+      "version": "1298.5.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1298.6.0",
+      "version": "1298.6.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1353.6.0",
+      "version": "1353.6.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1353.7.0",
+      "version": "1353.7.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1353.8.0",
+      "version": "1353.8.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1409.2.0",
+      "version": "1409.2.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1409.5.0",
+      "version": "1409.5.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1409.6.0",
+      "version": "1409.6.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1409.7.0",
+      "version": "1409.7.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1409.8.0",
+      "version": "1409.8.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1409.9.0",
+      "version": "1409.9.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1465.6.0",
+      "version": "1465.6.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1465.7.0",
+      "version": "1465.7.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1465.8.0",
+      "version": "1465.8.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1520.5.0",
+      "version": "1520.5.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1520.6.0",
+      "version": "1520.6.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1520.8.0",
+      "version": "1520.8.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1520.9.0",
+      "version": "1520.9.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1576.4.0",
+      "version": "1576.4.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1576.5.0",
+      "version": "1576.5.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1632.2.1",
+      "version": "1632.2.1"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1632.3.0",
+      "version": "1632.3.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1688.5.3",
+      "version": "1688.5.3"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1745.3.1",
+      "version": "1745.3.1"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1745.4.0",
+      "version": "1745.4.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1745.5.0",
+      "version": "1745.5.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1745.6.0",
+      "version": "1745.6.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1745.7.0",
+      "version": "1745.7.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1800.4.0",
+      "version": "1800.4.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1800.5.0",
+      "version": "1800.5.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1800.6.0",
+      "version": "1800.6.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1800.7.0",
+      "version": "1800.7.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1855.4.0",
+      "version": "1855.4.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1855.5.0",
+      "version": "1855.5.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1911.3.0",
+      "version": "1911.3.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1911.4.0",
+      "version": "1911.4.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1911.5.0",
+      "version": "1911.5.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1967.3.0",
+      "version": "1967.3.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1967.4.0",
+      "version": "1967.4.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1967.5.0",
+      "version": "1967.5.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:1967.6.0",
+      "version": "1967.6.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:2023.4.0",
+      "version": "2023.4.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:2023.5.0",
+      "version": "2023.5.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:2079.3.0",
+      "version": "2079.3.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:2079.4.0",
+      "version": "2079.4.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:2079.5.1",
+      "version": "2079.5.1"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:2079.6.0",
+      "version": "2079.6.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:2135.4.0",
+      "version": "2135.4.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:2135.5.0",
+      "version": "2135.5.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:2135.6.0",
+      "version": "2135.6.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:2191.4.1",
+      "version": "2191.4.1"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:2191.5.0",
+      "version": "2191.5.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:2247.5.0",
+      "version": "2247.5.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:2247.6.0",
+      "version": "2247.6.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:2247.7.0",
+      "version": "2247.7.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:2303.3.0",
+      "version": "2303.3.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:494.3.0",
+      "version": "494.3.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:494.4.0",
+      "version": "494.4.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:494.5.0",
+      "version": "494.5.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:522.5.0",
+      "version": "522.5.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:522.6.0",
+      "version": "522.6.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:557.2.0",
+      "version": "557.2.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:607.0.0",
+      "version": "607.0.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:633.1.0",
+      "version": "633.1.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:647.0.0",
+      "version": "647.0.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:647.2.0",
+      "version": "647.2.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:681.0.0",
+      "version": "681.0.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:681.1.0",
+      "version": "681.1.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:681.2.0",
+      "version": "681.2.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:717.1.0",
+      "version": "717.1.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:717.3.0",
+      "version": "717.3.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:723.3.0",
+      "version": "723.3.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:766.3.0",
+      "version": "766.3.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:766.4.0",
+      "version": "766.4.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:766.5.0",
+      "version": "766.5.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:835.10.0",
+      "version": "835.10.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:835.11.0",
+      "version": "835.11.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:835.12.0",
+      "version": "835.12.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:835.13.0",
+      "version": "835.13.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:835.8.0",
+      "version": "835.8.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:835.9.0",
+      "version": "835.9.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:899.13.0",
+      "version": "899.13.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:899.15.0",
+      "version": "899.15.0"
+    },
+    {
+      "offer": "CoreOS",
+      "publisher": "CoreOS",
+      "sku": "Stable",
+      "urn": "CoreOS:CoreOS:Stable:899.17.0",
+      "version": "899.17.0"
+    }
+  ],
+  "DEBIAN": [
+    {
+      "offer": "debian-10",
+      "publisher": "Debian",
+      "sku": "10-backports",
+      "urn": "Debian:debian-10:10-backports:0.20191113.76",
+      "version": "0.20191113.76"
+    }
+  ],
+  "OPENSUSE": [
+    {
+      "offer": "openSUSE-Leap",
+      "publisher": "SUSE",
+      "sku": "42.3",
+      "urn": "SUSE:openSUSE-Leap:42.3:latest",
+      "urnAlias": "openSUSE-Leap",
+      "version": "latest"
+    }
+  ],
+  "RHEL": [
+    {
+      "offer": "RHEL",
+      "publisher": "RedHat",
+      "sku": "7-LVM",
+      "urn": "RedHat:RHEL:7-LVM:latest",
+      "urnAlias": "RHEL",
+      "version": "latest"
+    },
+    {
+      "offer": "RHEL",
+      "publisher": "RedHat",
+      "sku": "6.10",
+      "urn": "RedHat:RHEL:6.10:6.10.2019061919",
+      "version": "6.10.2019061919"
+    },
+    {
+      "offer": "RHEL",
+      "publisher": "RedHat",
+      "sku": "6.7",
+      "urn": "RedHat:RHEL:6.7:6.7.2017090815",
+      "version": "6.7.2017090815"
+    },
+    {
+      "offer": "RHEL",
+      "publisher": "RedHat",
+      "sku": "6.8",
+      "urn": "RedHat:RHEL:6.8:6.8.2017090906",
+      "version": "6.8.2017090906"
+    },
+    {
+      "offer": "RHEL",
+      "publisher": "RedHat",
+      "sku": "6.9",
+      "urn": "RedHat:RHEL:6.9:6.9.2018010506",
+      "version": "6.9.2018010506"
+    },
+    {
+      "offer": "RHEL",
+      "publisher": "RedHat",
+      "sku": "7-LVM",
+      "urn": "RedHat:RHEL:7-LVM:7.7.2019102813",
+      "version": "7.7.2019102813"
+    },
+    {
+      "offer": "RHEL",
+      "publisher": "RedHat",
+      "sku": "7-RAW",
+      "urn": "RedHat:RHEL:7-RAW:7.7.2019090418",
+      "version": "7.7.2019090418"
+    },
+    {
+      "offer": "RHEL",
+      "publisher": "RedHat",
+      "sku": "7-RAW-CI",
+      "urn": "RedHat:RHEL:7-RAW-CI:7.7.2019081601",
+      "version": "7.7.2019081601"
+    },
+    {
+      "offer": "RHEL",
+      "publisher": "RedHat",
+      "sku": "7.2",
+      "urn": "RedHat:RHEL:7.2:7.2.2017090717",
+      "version": "7.2.2017090717"
+    },
+    {
+      "offer": "RHEL",
+      "publisher": "RedHat",
+      "sku": "7.3",
+      "urn": "RedHat:RHEL:7.3:7.3.2017090800",
+      "version": "7.3.2017090800"
+    },
+    {
+      "offer": "RHEL",
+      "publisher": "RedHat",
+      "sku": "7.4",
+      "urn": "RedHat:RHEL:7.4:7.4.2019102813",
+      "version": "7.4.2019102813"
+    },
+    {
+      "offer": "RHEL",
+      "publisher": "RedHat",
+      "sku": "7.5",
+      "urn": "RedHat:RHEL:7.5:7.6.2019102813",
+      "version": "7.6.2019102813"
+    },
+    {
+      "offer": "RHEL",
+      "publisher": "RedHat",
+      "sku": "7.6",
+      "urn": "RedHat:RHEL:7.6:7.6.2019102813",
+      "version": "7.6.2019102813"
+    },
+    {
+      "offer": "RHEL",
+      "publisher": "RedHat",
+      "sku": "7.7",
+      "urn": "RedHat:RHEL:7.7:7.7.2019090316",
+      "version": "7.7.2019090316"
+    },
+    {
+      "offer": "RHEL",
+      "publisher": "RedHat",
+      "sku": "8",
+      "urn": "RedHat:RHEL:8:8.0.20191023",
+      "version": "8.0.20191023"
+    },
+    {
+      "offer": "rhel-byos",
+      "publisher": "RedHat",
+      "sku": "rhel-lvm74",
+      "urn": "RedHat:rhel-byos:rhel-lvm74:7.4.20190620",
+      "version": "7.4.20190620"
+    },
+    {
+      "offer": "rhel-byos",
+      "publisher": "RedHat",
+      "sku": "rhel-lvm75",
+      "urn": "RedHat:rhel-byos:rhel-lvm75:7.5.20190620",
+      "version": "7.5.20190620"
+    },
+    {
+      "offer": "rhel-byos",
+      "publisher": "RedHat",
+      "sku": "rhel-lvm76",
+      "urn": "RedHat:rhel-byos:rhel-lvm76:7.6.20190918",
+      "version": "7.6.20190918"
+    },
+    {
+      "offer": "rhel-byos",
+      "publisher": "RedHat",
+      "sku": "rhel-lvm77",
+      "urn": "RedHat:rhel-byos:rhel-lvm77:7.7.20190819",
+      "version": "7.7.20190819"
+    },
+    {
+      "offer": "rhel-byos",
+      "publisher": "RedHat",
+      "sku": "rhel-lvm8",
+      "urn": "RedHat:rhel-byos:rhel-lvm8:8.0.20190620",
+      "version": "8.0.20190620"
+    },
+    {
+      "offer": "rhel-byos",
+      "publisher": "RedHat",
+      "sku": "rhel-raw-ci76",
+      "urn": "RedHat:rhel-byos:rhel-raw-ci76:7.6.20190813",
+      "version": "7.6.20190813"
+    },
+    {
+      "offer": "rhel-byos",
+      "publisher": "RedHat",
+      "sku": "rhel-raw69",
+      "urn": "RedHat:rhel-byos:rhel-raw69:6.9.20181023",
+      "version": "6.9.20181023"
+    },
+    {
+      "offer": "rhel-byos",
+      "publisher": "RedHat",
+      "sku": "rhel-raw72",
+      "urn": "RedHat:rhel-byos:rhel-raw72:7.2.20190807",
+      "version": "7.2.20190807"
+    },
+    {
+      "offer": "rhel-byos",
+      "publisher": "RedHat",
+      "sku": "rhel-raw75",
+      "urn": "RedHat:rhel-byos:rhel-raw75:7.5.20190620",
+      "version": "7.5.20190620"
+    },
+    {
+      "offer": "rhel-byos",
+      "publisher": "RedHat",
+      "sku": "rhel-raw76",
+      "urn": "RedHat:rhel-byos:rhel-raw76:7.6.20190620",
+      "version": "7.6.20190620"
+    },
+    {
+      "offer": "RHEL-HA",
+      "publisher": "RedHat",
+      "sku": "7.4",
+      "urn": "RedHat:RHEL-HA:7.4:7.4.2019062021",
+      "version": "7.4.2019062021"
+    },
+    {
+      "offer": "RHEL-HA",
+      "publisher": "RedHat",
+      "sku": "7.5",
+      "urn": "RedHat:RHEL-HA:7.5:7.5.2019062021",
+      "version": "7.5.2019062021"
+    },
+    {
+      "offer": "RHEL-HA",
+      "publisher": "RedHat",
+      "sku": "7.6",
+      "urn": "RedHat:RHEL-HA:7.6:7.6.2019062019",
+      "version": "7.6.2019062019"
+    },
+    {
+      "offer": "rhel-ocp-marketplace",
+      "publisher": "RedHat",
+      "sku": "rhel74",
+      "urn": "RedHat:rhel-ocp-marketplace:rhel74:7.4.1",
+      "version": "7.4.1"
+    },
+    {
+      "offer": "rhel-ocp-marketplace",
+      "publisher": "RedHat",
+      "sku": "rhel75",
+      "urn": "RedHat:rhel-ocp-marketplace:rhel75:7.5.1",
+      "version": "7.5.1"
+    },
+    {
+      "offer": "rhel-ocp-marketplace",
+      "publisher": "RedHat",
+      "sku": "rhel76",
+      "urn": "RedHat:rhel-ocp-marketplace:rhel76:7.6.1",
+      "version": "7.6.1"
+    },
+    {
+      "offer": "RHEL-SAP",
+      "publisher": "RedHat",
+      "sku": "7.4",
+      "urn": "RedHat:RHEL-SAP:7.4:7.4.2019062505",
+      "version": "7.4.2019062505"
+    },
+    {
+      "offer": "RHEL-SAP",
+      "publisher": "RedHat",
+      "sku": "7.5",
+      "urn": "RedHat:RHEL-SAP:7.5:7.5.2019062505",
+      "version": "7.5.2019062505"
+    },
+    {
+      "offer": "RHEL-SAP",
+      "publisher": "RedHat",
+      "sku": "7.6",
+      "urn": "RedHat:RHEL-SAP:7.6:7.6.2019071300",
+      "version": "7.6.2019071300"
+    },
+    {
+      "offer": "RHEL-SAP",
+      "publisher": "RedHat",
+      "sku": "7.7",
+      "urn": "RedHat:RHEL-SAP:7.7:7.7.2019082922",
+      "version": "7.7.2019082922"
+    },
+    {
+      "offer": "RHEL-SAP-APPS",
+      "publisher": "RedHat",
+      "sku": "6.8",
+      "urn": "RedHat:RHEL-SAP-APPS:6.8:6.8.2017053118",
+      "version": "6.8.2017053118"
+    },
+    {
+      "offer": "RHEL-SAP-APPS",
+      "publisher": "RedHat",
+      "sku": "7.3",
+      "urn": "RedHat:RHEL-SAP-APPS:7.3:7.3.2017053118",
+      "version": "7.3.2017053118"
+    },
+    {
+      "offer": "RHEL-SAP-HA",
+      "publisher": "RedHat",
+      "sku": "7.4",
+      "urn": "RedHat:RHEL-SAP-HA:7.4:7.4.2019062018",
+      "version": "7.4.2019062018"
+    },
+    {
+      "offer": "RHEL-SAP-HA",
+      "publisher": "RedHat",
+      "sku": "7.5",
+      "urn": "RedHat:RHEL-SAP-HA:7.5:7.5.2019062116",
+      "version": "7.5.2019062116"
+    },
+    {
+      "offer": "RHEL-SAP-HA",
+      "publisher": "RedHat",
+      "sku": "7.6",
+      "urn": "RedHat:RHEL-SAP-HA:7.6:7.6.2019062320",
+      "version": "7.6.2019062320"
+    },
+    {
+      "offer": "RHEL-SAP-HANA",
+      "publisher": "RedHat",
+      "sku": "6.7",
+      "urn": "RedHat:RHEL-SAP-HANA:6.7:6.7.2017053121",
+      "version": "6.7.2017053121"
+    },
+    {
+      "offer": "RHEL-SAP-HANA",
+      "publisher": "RedHat",
+      "sku": "7.2",
+      "urn": "RedHat:RHEL-SAP-HANA:7.2:7.2.2018051419",
+      "version": "7.2.2018051419"
+    },
+    {
+      "offer": "RHEL-SAP-HANA",
+      "publisher": "RedHat",
+      "sku": "7.3",
+      "urn": "RedHat:RHEL-SAP-HANA:7.3:7.3.2018051421",
+      "version": "7.3.2018051421"
+    }
+  ],
+  "SLES": [
+    {
+      "offer": "SLES",
+      "publisher": "SUSE",
+      "sku": "15",
+      "urn": "SUSE:SLES:15:latest",
+      "urnAlias": "SLES",
+      "version": "latest"
+    },
+    {
+      "offer": "SLES",
+      "publisher": "SUSE",
+      "sku": "12-SP4",
+      "urn": "SUSE:SLES:12-SP4:2019.11.13",
+      "version": "2019.11.13"
+    },
+    {
+      "offer": "SLES",
+      "publisher": "SUSE",
+      "sku": "12-sp4-gen2",
+      "urn": "SUSE:SLES:12-sp4-gen2:2019.11.13",
+      "version": "2019.11.13"
+    },
+    {
+      "offer": "sles-12-sp5",
+      "publisher": "SUSE",
+      "sku": "gen2",
+      "urn": "SUSE:sles-12-sp5:gen2:2019.12.09",
+      "version": "2019.12.09"
+    },
+    {
+      "offer": "sles-12-sp5-basic",
+      "publisher": "SUSE",
+      "sku": "gen2",
+      "urn": "SUSE:sles-12-sp5-basic:gen2:2019.12.09",
+      "version": "2019.12.09"
+    },
+    {
+      "offer": "sles-12-sp5-byos",
+      "publisher": "SUSE",
+      "sku": "gen2",
+      "urn": "SUSE:sles-12-sp5-byos:gen2:2019.12.09",
+      "version": "2019.12.09"
+    },
+    {
+      "offer": "sles-12-sp5-hpc",
+      "publisher": "SUSE",
+      "sku": "gen2",
+      "urn": "SUSE:sles-12-sp5-hpc:gen2:2019.12.12",
+      "version": "2019.12.12"
+    },
+    {
+      "offer": "sles-12-sp5-hpc-byos",
+      "publisher": "SUSE",
+      "sku": "gen2",
+      "urn": "SUSE:sles-12-sp5-hpc-byos:gen2:2019.12.12",
+      "version": "2019.12.12"
+    },
+    {
+      "offer": "sles-15-sp1",
+      "publisher": "SUSE",
+      "sku": "gen1",
+      "urn": "SUSE:sles-15-sp1:gen1:2019.11.13",
+      "version": "2019.11.13"
+    },
+    {
+      "offer": "sles-15-sp1",
+      "publisher": "SUSE",
+      "sku": "gen2",
+      "urn": "SUSE:sles-15-sp1:gen2:2019.11.13",
+      "version": "2019.11.13"
+    },
+    {
+      "offer": "sles-15-sp1-basic",
+      "publisher": "SUSE",
+      "sku": "gen1",
+      "urn": "SUSE:sles-15-sp1-basic:gen1:2019.6.24",
+      "version": "2019.6.24"
+    },
+    {
+      "offer": "sles-15-sp1-basic",
+      "publisher": "SUSE",
+      "sku": "gen2",
+      "urn": "SUSE:sles-15-sp1-basic:gen2:2019.11.13",
+      "version": "2019.11.13"
+    },
+    {
+      "offer": "sles-15-sp1-byos",
+      "publisher": "SUSE",
+      "sku": "gen1",
+      "urn": "SUSE:sles-15-sp1-byos:gen1:2019.11.13",
+      "version": "2019.11.13"
+    },
+    {
+      "offer": "sles-15-sp1-byos",
+      "publisher": "SUSE",
+      "sku": "gen2",
+      "urn": "SUSE:sles-15-sp1-byos:gen2:2019.11.13",
+      "version": "2019.11.13"
+    },
+    {
+      "offer": "sles-15-sp1-chost-byos",
+      "publisher": "SUSE",
+      "sku": "gen1",
+      "urn": "SUSE:sles-15-sp1-chost-byos:gen1:2019.12.11",
+      "version": "2019.12.11"
+    },
+    {
+      "offer": "sles-15-sp1-chost-byos",
+      "publisher": "SUSE",
+      "sku": "gen2",
+      "urn": "SUSE:sles-15-sp1-chost-byos:gen2:2019.12.11",
+      "version": "2019.12.11"
+    },
+    {
+      "offer": "sles-15-sp1-hpc",
+      "publisher": "SUSE",
+      "sku": "gen1",
+      "urn": "SUSE:sles-15-sp1-hpc:gen1:2019.11.14",
+      "version": "2019.11.14"
+    },
+    {
+      "offer": "sles-15-sp1-hpc",
+      "publisher": "SUSE",
+      "sku": "gen2",
+      "urn": "SUSE:sles-15-sp1-hpc:gen2:2019.11.14",
+      "version": "2019.11.14"
+    },
+    {
+      "offer": "sles-15-sp1-hpc-byos",
+      "publisher": "SUSE",
+      "sku": "gen1",
+      "urn": "SUSE:sles-15-sp1-hpc-byos:gen1:2019.11.14",
+      "version": "2019.11.14"
+    },
+    {
+      "offer": "sles-15-sp1-hpc-byos",
+      "publisher": "SUSE",
+      "sku": "gen2",
+      "urn": "SUSE:sles-15-sp1-hpc-byos:gen2:2019.11.14",
+      "version": "2019.11.14"
+    },
+    {
+      "offer": "SLES-BYOS",
+      "publisher": "SUSE",
+      "sku": "11-SP4",
+      "urn": "SUSE:SLES-BYOS:11-SP4:2019.12.05",
+      "version": "2019.12.05"
+    },
+    {
+      "offer": "SLES-BYOS",
+      "publisher": "SUSE",
+      "sku": "12-sp1",
+      "urn": "SUSE:SLES-BYOS:12-sp1:2019.11.20",
+      "version": "2019.11.20"
+    },
+    {
+      "offer": "SLES-BYOS",
+      "publisher": "SUSE",
+      "sku": "12-sp2",
+      "urn": "SUSE:SLES-BYOS:12-sp2:2019.11.20",
+      "version": "2019.11.20"
+    },
+    {
+      "offer": "SLES-BYOS",
+      "publisher": "SUSE",
+      "sku": "12-SP3",
+      "urn": "SUSE:SLES-BYOS:12-SP3:2019.11.18",
+      "version": "2019.11.18"
+    },
+    {
+      "offer": "SLES-BYOS",
+      "publisher": "SUSE",
+      "sku": "12-SP4",
+      "urn": "SUSE:SLES-BYOS:12-SP4:2019.11.13",
+      "version": "2019.11.13"
+    },
+    {
+      "offer": "SLES-BYOS",
+      "publisher": "SUSE",
+      "sku": "12-sp4-gen2",
+      "urn": "SUSE:SLES-BYOS:12-sp4-gen2:2019.11.13",
+      "version": "2019.11.13"
+    },
+    {
+      "offer": "SLES-BYOS",
+      "publisher": "SUSE",
+      "sku": "15",
+      "urn": "SUSE:SLES-BYOS:15:2019.11.15",
+      "version": "2019.11.15"
+    },
+    {
+      "offer": "SLES-BYOS",
+      "publisher": "SUSE",
+      "sku": "15-gen2",
+      "urn": "SUSE:SLES-BYOS:15-gen2:2019.11.15",
+      "version": "2019.11.15"
+    },
+    {
+      "offer": "SLES-HPC",
+      "publisher": "SUSE",
+      "sku": "12-SP3",
+      "urn": "SUSE:SLES-HPC:12-SP3:2019.11.14",
+      "version": "2019.11.14"
+    },
+    {
+      "offer": "SLES-SAP",
+      "publisher": "SUSE",
+      "sku": "12-sp1",
+      "urn": "SUSE:SLES-SAP:12-sp1:2019.11.20",
+      "version": "2019.11.20"
+    },
+    {
+      "offer": "SLES-SAP",
+      "publisher": "SUSE",
+      "sku": "12-SP2",
+      "urn": "SUSE:SLES-SAP:12-SP2:2019.11.19",
+      "version": "2019.11.19"
+    },
+    {
+      "offer": "SLES-SAP",
+      "publisher": "SUSE",
+      "sku": "12-SP3",
+      "urn": "SUSE:SLES-SAP:12-SP3:2019.11.18",
+      "version": "2019.11.18"
+    },
+    {
+      "offer": "SLES-SAP",
+      "publisher": "SUSE",
+      "sku": "12-SP4",
+      "urn": "SUSE:SLES-SAP:12-SP4:2019.11.13",
+      "version": "2019.11.13"
+    },
+    {
+      "offer": "SLES-SAP",
+      "publisher": "SUSE",
+      "sku": "12-sp4-gen2",
+      "urn": "SUSE:SLES-SAP:12-sp4-gen2:2019.11.13",
+      "version": "2019.11.13"
+    },
+    {
+      "offer": "SLES-SAP",
+      "publisher": "SUSE",
+      "sku": "15",
+      "urn": "SUSE:SLES-SAP:15:2019.11.15",
+      "version": "2019.11.15"
+    },
+    {
+      "offer": "SLES-SAP",
+      "publisher": "SUSE",
+      "sku": "gen2-15",
+      "urn": "SUSE:SLES-SAP:gen2-15:2019.11.15",
+      "version": "2019.11.15"
+    },
+    {
+      "offer": "sles-sap-12-sp5",
+      "publisher": "SUSE",
+      "sku": "gen1",
+      "urn": "SUSE:sles-sap-12-sp5:gen1:2019.12.12",
+      "version": "2019.12.12"
+    },
+    {
+      "offer": "sles-sap-12-sp5",
+      "publisher": "SUSE",
+      "sku": "gen2",
+      "urn": "SUSE:sles-sap-12-sp5:gen2:2019.12.12",
+      "version": "2019.12.12"
+    },
+    {
+      "offer": "sles-sap-12-sp5-byos",
+      "publisher": "SUSE",
+      "sku": "gen1",
+      "urn": "SUSE:sles-sap-12-sp5-byos:gen1:2019.12.12",
+      "version": "2019.12.12"
+    },
+    {
+      "offer": "sles-sap-12-sp5-byos",
+      "publisher": "SUSE",
+      "sku": "gen2",
+      "urn": "SUSE:sles-sap-12-sp5-byos:gen2:2019.12.12",
+      "version": "2019.12.12"
+    },
+    {
+      "offer": "sles-sap-15-sp1",
+      "publisher": "SUSE",
+      "sku": "gen1",
+      "urn": "SUSE:sles-sap-15-sp1:gen1:2019.11.13",
+      "version": "2019.11.13"
+    },
+    {
+      "offer": "sles-sap-15-sp1",
+      "publisher": "SUSE",
+      "sku": "gen2",
+      "urn": "SUSE:sles-sap-15-sp1:gen2:2019.11.13",
+      "version": "2019.11.13"
+    },
+    {
+      "offer": "sles-sap-15-sp1-byos",
+      "publisher": "SUSE",
+      "sku": "gen1",
+      "urn": "SUSE:sles-sap-15-sp1-byos:gen1:2019.11.14",
+      "version": "2019.11.14"
+    },
+    {
+      "offer": "SLES-SAP-BYOS",
+      "publisher": "SUSE",
+      "sku": "12-sp1",
+      "urn": "SUSE:SLES-SAP-BYOS:12-sp1:2019.11.20",
+      "version": "2019.11.20"
+    },
+    {
+      "offer": "SLES-SAP-BYOS",
+      "publisher": "SUSE",
+      "sku": "12-SP2",
+      "urn": "SUSE:SLES-SAP-BYOS:12-SP2:2019.11.20",
+      "version": "2019.11.20"
+    },
+    {
+      "offer": "SLES-SAP-BYOS",
+      "publisher": "SUSE",
+      "sku": "12-SP3",
+      "urn": "SUSE:SLES-SAP-BYOS:12-SP3:2019.11.18",
+      "version": "2019.11.18"
+    },
+    {
+      "offer": "SLES-SAP-BYOS",
+      "publisher": "SUSE",
+      "sku": "12-sp4",
+      "urn": "SUSE:SLES-SAP-BYOS:12-sp4:2019.11.13",
+      "version": "2019.11.13"
+    },
+    {
+      "offer": "SLES-SAP-BYOS",
+      "publisher": "SUSE",
+      "sku": "15",
+      "urn": "SUSE:SLES-SAP-BYOS:15:2019.11.15",
+      "version": "2019.11.15"
+    },
+    {
+      "offer": "SLES-SAP-BYOS",
+      "publisher": "SUSE",
+      "sku": "gen2-12-sp4",
+      "urn": "SUSE:SLES-SAP-BYOS:gen2-12-sp4:2019.11.13",
+      "version": "2019.11.13"
+    },
+    {
+      "offer": "SLES-SAP-BYOS",
+      "publisher": "SUSE",
+      "sku": "gen2-15",
+      "urn": "SUSE:SLES-SAP-BYOS:gen2-15:2019.11.15",
+      "version": "2019.11.15"
+    },
+    {
+      "offer": "SLES-SAPCAL",
+      "publisher": "SUSE",
+      "sku": "11-SP4",
+      "urn": "SUSE:SLES-SAPCAL:11-SP4:2018.10.11",
+      "version": "2018.10.11"
+    },
+    {
+      "offer": "SLES-SAPCAL",
+      "publisher": "SUSE",
+      "sku": "12-SP1",
+      "urn": "SUSE:SLES-SAPCAL:12-SP1:2019.11.19",
+      "version": "2019.11.19"
+    },
+    {
+      "offer": "SLES-SAPCAL",
+      "publisher": "SUSE",
+      "sku": "12-SP3",
+      "urn": "SUSE:SLES-SAPCAL:12-SP3:2019.11.18",
+      "version": "2019.11.18"
+    },
+    {
+      "offer": "SLES-Standard",
+      "publisher": "SUSE",
+      "sku": "12-SP4",
+      "urn": "SUSE:SLES-Standard:12-SP4:2019.11.13",
+      "version": "2019.11.13"
+    },
+    {
+      "offer": "SLES-Standard",
+      "publisher": "SUSE",
+      "sku": "12-sp4-gen2",
+      "urn": "SUSE:SLES-Standard:12-sp4-gen2:2019.11.13",
+      "version": "2019.11.13"
+    }
+  ],
+  "WINDOWS": [
+    {
+      "offer": "WindowsServer",
+      "publisher": "MicrosoftWindowsServer",
+      "sku": "2019-Datacenter",
+      "urn": "MicrosoftWindowsServer:WindowsServer:2019-Datacenter:latest",
+      "urnAlias": "Win2019Datacenter",
+      "version": "latest"
+    },
+    {
+      "offer": "WindowsServer",
+      "publisher": "MicrosoftWindowsServer",
+      "sku": "2016-Datacenter",
+      "urn": "MicrosoftWindowsServer:WindowsServer:2016-Datacenter:latest",
+      "urnAlias": "Win2016Datacenter",
+      "version": "latest"
+    },
+    {
+      "offer": "WindowsServer",
+      "publisher": "MicrosoftWindowsServer",
+      "sku": "2012-R2-Datacenter",
+      "urn": "MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter:latest",
+      "urnAlias": "Win2012R2Datacenter",
+      "version": "latest"
+    },
+    {
+      "offer": "WindowsServer",
+      "publisher": "MicrosoftWindowsServer",
+      "sku": "2012-Datacenter",
+      "urn": "MicrosoftWindowsServer:WindowsServer:2012-Datacenter:latest",
+      "urnAlias": "Win2012Datacenter",
+      "version": "latest"
+    },
+    {
+      "offer": "WindowsServer",
+      "publisher": "MicrosoftWindowsServer",
+      "sku": "2008-R2-SP1",
+      "urn": "MicrosoftWindowsServer:WindowsServer:2008-R2-SP1:latest",
+      "urnAlias": "Win2008R2SP1",
+      "version": "latest"
+    }
+  ]
+}

@@ -15,7 +15,7 @@ namespace EOPSTemplateEngine::AWS {
         std::map<std::string, GenericAWSResource *> Resources;
 
     public:
-        Json ToJson();
+        Json ToJson() override;
 
         void AddDescription(std::string description);
 

@@ -2,15 +2,17 @@
 #define INSTANCE_TYPE_HEADER
 
 #include <nlohmann/json.hpp>
+#include <optional>
+#include <string>
 
 using Json = nlohmann::json;
 
-namespace EOPSTemplateEngine::AWS::EC2 {
+namespace EOPSTemplateEngine::Generics {
     struct InstanceType {
         std::string name;
         float cpu;
         float ram;
-        bool isGPUEnabled;
+        std::optional<bool> isGPUEnabled;
     };
 
     void from_json(const Json &j, InstanceType &s);

@@ -65,9 +65,9 @@ namespace EOPSTemplateEngine::AWS::EC2 {
         void setInstanceTypeFromSpec(int cores, float ram, const std::string &optimisation, bool needsGPU);
 
     public:
-        explicit Instance(std::string name);
+        explicit Instance(std::string &name);
 
-        virtual void setFromParsedResource(EOPSNativeLib::Models::VirtualMachine *res);
+        void setFromParsedResource(EOPSNativeLib::Models::VirtualMachine *res);
 
         Json ToJson() override;
     };

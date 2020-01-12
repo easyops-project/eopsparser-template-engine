@@ -10,6 +10,8 @@ namespace EOPSTemplateEngine::Generics {
     class GenericTemplate {
     public:
         virtual void AddResource(EOPSNativeLib::Models::Resource *resource) = 0;
+
+        virtual Json ToJson() = 0;
     };
 } // namespace EOPSTemplateEngine
 

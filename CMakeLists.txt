@@ -1,12 +1,22 @@
 cmake_minimum_required(VERSION 3.15)
 
 project(eopstemplateengine) # setting the project name
+
 add_definitions(-DNAPI_VERSION=4) # adding NAPI V4 Def
+
+# add library files
 add_subdirectory(lib/EasyOps-Native-Lib)
 include_directories(lib/EasyOps-Native-Lib/include) #include the native lib
+
+# setup Source Files
 file(GLOB_RECURSE SOURCE_FILES "src/*.cpp") # add all source files
-add_definitions("-DPATH_TO_JSON=\"${CMAKE_SOURCE_DIR}/src/Models/AWS/EC2/Assets/InstanceType.json\"")
-add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES}) # set the end as library
+add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
+#add stuff
+add_definitions("-DAWS_INSTANCES=\"${CMAKE_SOURCE_DIR}/src/Models/AWS/EC2/Assets/InstanceType.json\"")
+add_definitions("-DAZURE_WINDOWS_INSTANCES=\"${CMAKE_SOURCE_DIR}/src/Models/Azure/Compute/Assets/WindowsInstanceType.json\"")
+add_definitions("-DAZURE_LINUX_INSTANCES=\"${CMAKE_SOURCE_DIR}/src/Models/Azure/Compute/Assets/LinuxInstanceType.json\"")
+add_definitions("-DAZURE_OS_IMAGES=\"${CMAKE_SOURCE_DIR}/src/Models/Azure/Compute/Assets/OsImages.json\"")
+
 target_link_libraries(${PROJECT_NAME} eopslibrary)
 # set properties
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 17)
@@ -15,6 +25,10 @@ set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "" SUFFIX ".node") #set 
 #includes
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/node_modules/node-addon-api ${CMAKE_JS_INC}) # include node addon api and js
 target_link_libraries(${PROJECT_NAME} ${CMAKE_JS_LIB}) # link the CMAKEJSLIB
+
+##aws sdk
+#find_package(AWSSDK REQUIRED COMPONENTS ec2)
+#target_link_libraries(${PROJECT_NAME} ${AWSSDK_LINK_LIBRARIES})
 
 # adding node-addon-api
 execute_process(COMMAND node -p "require('node-addon-api').include"

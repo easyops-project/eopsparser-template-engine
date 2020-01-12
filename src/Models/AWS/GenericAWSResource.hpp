@@ -20,19 +20,17 @@ namespace EOPSTemplateEngine::AWS {
         std::string Type = "";
         std::vector<std::string> DependsOn;
 
+
     public:
         GenericAWSResource();
 
         explicit GenericAWSResource(std::string type);
 
-        void AddDependency(std::string resourceName);
+        void AddDependencies(std::vector<std::string> &resources);
 
         Json ToJson() override;
 
         virtual ~GenericAWSResource();
-
-        virtual void setFromParsedResource(
-                EOPSNativeLib::Models::Resource *res);
 
         std::string getAvailabilityZoneFromString(std::string zone);
     };

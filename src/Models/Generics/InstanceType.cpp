@@ -1,11 +1,12 @@
 #include "InstanceType.hpp"
 
-namespace EOPSTemplateEngine::AWS::EC2 {
+namespace EOPSTemplateEngine::Generics {
     void from_json(const Json &j, InstanceType &s) {
         s.cpu = j.at("cpu");
         s.ram = j.at("ram");
         s.name = j.at("name");
-        s.isGPUEnabled = j.at("isGPUEnabled");
+
+        if (s.isGPUEnabled != std::nullopt) s.isGPUEnabled = j.at("isGPUEnabled");
     };
 
     bool sortByCpuAndRam(const InstanceType &a, const InstanceType &b) {
