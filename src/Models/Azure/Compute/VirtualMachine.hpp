@@ -5,6 +5,7 @@
 #include "../GenericAzureResource.hpp"
 #include "StorageProfile.hpp"
 #include "HardwareProfile.hpp"
+#include <string>
 
 namespace EOPSTemplateEngine::Azure::Compute {
     class VirtualMachine : public EOPSTemplateEngine::Azure::GenericAzureResource {

@@ -1,12 +1,12 @@
 #if !defined(AZURE_GENERIC_RESOURCE)
 #define AZURE_GENERIC_RESOURCE
 
-#include <EOPSNativeLib/Helpers/ISerializable.hpp>
+#include <EOPSNativeLib/Lib/ISerializable.hpp>
 #include <EOPSNativeLib/Models/resourceType.hpp>
 #include <string>
 
 namespace EOPSTemplateEngine::Azure {
-    class GenericAzureResource : public EOPSNativeLib::Helpers::ISerializable {
+    class GenericAzureResource : public EOPSNativeLib::Lib::ISerializable {
     private:
         std::string name;
         std::string type;

@@ -2,7 +2,7 @@
 #define EOPSTemplate_HEADER
 
 #include "AWS/CloudFormationTemplate.hpp"
-#include <EOPSNativeLib/Helpers/ISerializable.hpp>
+#include <EOPSNativeLib/Lib/ISerializable.hpp>
 #include "Azure/AzureResourceManagerTemplate.hpp"
 #include <nlohmann/json.hpp>
 
@@ -17,7 +17,7 @@ namespace EOPSTemplateEngine::Models {
     public:
         EOPSTemplate();
 
-        explicit EOPSTemplate(std::vector<EOPSNativeLib::Models::Resource *> resourcesToBeParsed);
+        explicit EOPSTemplate(const std::vector<EOPSNativeLib::Models::Resource *> &resourcesToBeParsed);
 
         Json ToJson();
     };

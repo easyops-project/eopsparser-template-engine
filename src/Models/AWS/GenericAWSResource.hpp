@@ -1,7 +1,7 @@
 #if !defined(GENERIC_RESOURCE_HEADER)
 #define GENERIC_RESOURCE_HEADER
 
-#include <EOPSNativeLib/Helpers/ISerializable.hpp>
+#include <EOPSNativeLib/Lib/ISerializable.hpp>
 #include <EOPSNativeLib/Models/resourceType.hpp>
 #include <nlohmann/json.hpp>
 #include <string>
@@ -15,7 +15,7 @@ namespace EOPSTemplateEngine::AWS {
         std::string Value;
     };
 
-    class GenericAWSResource : public EOPSNativeLib::Helpers::ISerializable {
+    class GenericAWSResource : public EOPSNativeLib::Lib::ISerializable {
     private:
         std::string Type = "";
         std::vector<std::string> DependsOn;

@@ -2,12 +2,15 @@
 #include "VirtualMachine.hpp"
 #include "../../Generics/InstanceType.hpp"
 #include <iostream>
-#include <EOPSNativeLib/Helpers/HelperFunctions.hpp>
+#include "../../../Helpers/helperFunctions.hpp"
+#include <vector>
+#include "StorageProfile.hpp"
 
 namespace EOPSTemplateEngine::Azure::Compute {
     VirtualMachine::VirtualMachine(std::string &name, std::string &resourceType, std::string &location)
             : GenericAzureResource(name, resourceType, location) {
         this->storageProfile = new StorageProfile();
+        this->hardwareProfile = new HardwareProfile();
     }
 
     Json VirtualMachine::ToJson() {
@@ -15,6 +18,7 @@ namespace EOPSTemplateEngine::Azure::Compute {
         Json vmProperties = Json::object();
 
         vmProperties["hardwareProfile"] = this->hardwareProfile->ToJson();
+        vmProperties["storageProfile"] = this->storageProfile->ToJson();
 
         j["properties"] = vmProperties;
         return j;
@@ -73,9 +77,7 @@ namespace EOPSTemplateEngine::Azure::Compute {
             chosenInstance = errorInstance;
         }
 
-        auto *hp = new HardwareProfile();
-        hp->setVMSize(chosenInstance->name);
-        this->hardwareProfile = hp;
+        this->hardwareProfile->setVMSize(chosenInstance->name);
     }
 
     void VirtualMachine::setFromParsedResource(EOPSNativeLib::Models::VirtualMachine *res) {
@@ -91,16 +93,14 @@ namespace EOPSTemplateEngine::Azure::Compute {
     void VirtualMachine::setOs(std::string &os) {
         std::string operatingSystem = os;
         std::string version = "latest";
-        std::string delimeter = "@";
         std::string latest = "latest";
 
         if (os.find('@') != std::string::npos) {
-            std::cout << "Here " << std::endl;
-            std::vector<std::string> *split = EOPSNativeLib::Helpers::splitStringByDelimiter(os, delimeter);
-            std::cout << "Here " << std::endl;
+            std::vector<std::string> split = EOPSNativeLib::Helpers::HelperFunctions::splitStringByDelimiter(os, '@');
 
-            operatingSystem = split->at(0);
-            version = split->at(1);
+            operatingSystem = split[0];
+            version = split[1];
+            std::cout << operatingSystem << " " << version;
         }
 
         std::ifstream jsonFile;
@@ -119,18 +119,23 @@ namespace EOPSTemplateEngine::Azure::Compute {
                     operatingSystem = "UbuntuServer";
                 }
 
-                std::vector<std::string> allSkus;
-                for (auto &l: s) {
-                    allSkus.push_back(l.getSku());
+                if (version == "latest") {
+                    this->storageProfile->setImageReference(s[0]);
+                } else {
+                    std::vector<std::string> allSkus;
+                    for (auto &l: s) {
+                        allSkus.push_back(l.sku);
+                    }
+                    int index = EOPSNativeLib::Helpers::HelperFunctions::returnIndexOfClosestVersion(version, allSkus);
+                    std::cout << index << std::endl;
+                    this->storageProfile->setImageReference(s[index]);
                 }
-                int index = EOPSNativeLib::Helpers::returnIndexOfClosestString(version, allSkus)->second;
-                this->storageProfile->setImageReference(s[index]);
             } else if (operatingSystem.find("CENTOS") != std::string::npos) {
                 std::vector<ImageReference> s = j.at("CENTOS");
                 ImageReference latestOs = s[0];
 
                 for (auto it = s.begin(); it != s.end();) {
-                    std::string offer = it->getOffer();
+                    std::string offer = it->offer;
                     transform(offer.begin(), offer.end(), offer.begin(), ::toupper);
 
                     if (offer != operatingSystem) {
@@ -144,21 +149,21 @@ namespace EOPSTemplateEngine::Azure::Compute {
                     std::cout << "Could not find your distribution. Setting to latest version of CentOS...";
                     this->storageProfile->setImageReference(latestOs);
                 } else {
-
                     std::vector<std::string> allVersions;
                     for (auto &l: s) {
-                        allVersions.push_back(l.getVersion());
+                        allVersions.push_back(l.version);
                     }
-                    int index = EOPSNativeLib::Helpers::returnIndexOfClosestString(version, allVersions)->second;
+                    int index = EOPSNativeLib::Helpers::HelperFunctions::returnIndexOfClosestVersion(version,
+                                                                                                     allVersions);
                     this->storageProfile->setImageReference(s[index]);
                 }
             } else if (operatingSystem.find("COREOS") != std::string::npos) {
                 std::vector<ImageReference> s = j.at("COREOS");
                 std::vector<std::string> allVersions;
                 for (auto &l: s) {
-                    allVersions.push_back(l.getVersion());
+                    allVersions.push_back(l.version);
                 }
-                int index = EOPSNativeLib::Helpers::returnIndexOfClosestString(version, allVersions)->second;
+                int index = EOPSNativeLib::Helpers::HelperFunctions::returnIndexOfClosestVersion(version, allVersions);
                 this->storageProfile->setImageReference(s[index]);
             } else if (operatingSystem.find("DEBIAN") != std::string::npos) {
                 std::vector<ImageReference> s = j.at("DEBIAN");
@@ -175,7 +180,7 @@ namespace EOPSTemplateEngine::Azure::Compute {
                     this->storageProfile->setImageReference(s[0]);
                 } else {
                     for (auto it = s.begin(); it != s.end();) {
-                        std::string offer = it->getOffer();
+                        std::string offer = it->offer;
                         transform(offer.begin(), offer.end(), offer.begin(), ::toupper);
 
                         if (offer != operatingSystem) {
@@ -192,9 +197,9 @@ namespace EOPSTemplateEngine::Azure::Compute {
 
                     std::vector<std::string> allSkus;
                     for (auto &l: s) {
-                        allSkus.push_back(l.getSku());
+                        allSkus.push_back(l.sku);
                     }
-                    int index = EOPSNativeLib::Helpers::returnIndexOfClosestString(version, allSkus)->second;
+                    int index = EOPSNativeLib::Helpers::HelperFunctions::returnIndexOfClosestVersion(version, allSkus);
                     this->storageProfile->setImageReference(s[index]);
                 }
             } else if (operatingSystem.find("SLES") != std::string::npos) {
@@ -205,7 +210,7 @@ namespace EOPSTemplateEngine::Azure::Compute {
                     this->storageProfile->setImageReference(s[0]);
                 } else {
                     for (auto it = s.begin(); it != s.end();) {
-                        std::string offer = it->getOffer();
+                        std::string offer = it->offer;
                         transform(offer.begin(), offer.end(), offer.begin(), ::toupper);
 
                         if (offer != operatingSystem) {
@@ -222,9 +227,9 @@ namespace EOPSTemplateEngine::Azure::Compute {
 
                     std::vector<std::string> allSkus;
                     for (auto &l: s) {
-                        allSkus.push_back(l.getSku());
+                        allSkus.push_back(l.sku);
                     }
-                    int index = EOPSNativeLib::Helpers::returnIndexOfClosestString(version, allSkus)->second;
+                    int index = EOPSNativeLib::Helpers::HelperFunctions::returnIndexOfClosestVersion(version, allSkus);
                     this->storageProfile->setImageReference(s[index]);
                 }
             } else if (operatingSystem.find("WINDOWS") != std::string::npos) {
@@ -232,9 +237,9 @@ namespace EOPSTemplateEngine::Azure::Compute {
 
                 std::vector<std::string> allSkus;
                 for (auto &l: s) {
-                    allSkus.push_back(l.getSku());
+                    allSkus.push_back(l.sku);
                 }
-                int index = EOPSNativeLib::Helpers::returnIndexOfClosestString(version, allSkus)->second;
+                int index = EOPSNativeLib::Helpers::HelperFunctions::returnIndexOfClosestVersion(version, allSkus);
                 this->storageProfile->setImageReference(s[index]);
             } else {
                 std::vector<ImageReference> s = j.at("UBUNTU");
@@ -245,15 +250,17 @@ namespace EOPSTemplateEngine::Azure::Compute {
 
                 std::vector<std::string> allSkus;
                 for (auto &l: s) {
-                    allSkus.push_back(l.getSku());
+                    allSkus.push_back(l.sku);
                 }
-                int index = EOPSNativeLib::Helpers::returnIndexOfClosestString(latest, allSkus)->second;
+                int index = EOPSNativeLib::Helpers::HelperFunctions::returnIndexOfClosestVersion(latest, allSkus);
                 this->storageProfile->setImageReference(s[index]);
             }
         } else {
             std::cout << "Failed to open the json file for OS! Setting it as ubuntu@latest" << std::endl;
             auto *ir = new ImageReference();
-            ir->setDefault();
+            ir->offer = "UbuntuServer";
+            ir->publisher = "Canonical";
+            ir->version = "latest";
             this->storageProfile->setImageReference(*ir);
         }
     }

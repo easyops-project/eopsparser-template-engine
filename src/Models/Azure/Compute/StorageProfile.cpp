@@ -1,54 +1,32 @@
 #include "StorageProfile.hpp"
 
+namespace EOPSTemplateEngine::Azure::Compute {
 // Image reference
-Json EOPSTemplateEngine::Azure::Compute::ImageReference::ToJson() {
-    Json j = Json::object();
+    void to_json(Json &j, const ImageReference &p) {
+        !p.offer.empty() ? j["offer"] = p.offer : "";
+        !p.publisher.empty() ? j["publisher"] = p.publisher : "";
+        !p.version.empty() ? j["version"] = p.version : "";
+        !p.sku.empty() ? j["sku"] = p.sku : "";
+    }
 
-    !this->id.empty() ? j["id"] = this->id : "";
-    !this->offer.empty() ? j["offer"] = this->id : "";
-    !this->publisher.empty() ? j["publisher"] = this->id : "";
-    !this->version.empty() ? j["version"] = this->id : "";
-    !this->sku.empty() ? j["sku"] = this->id : "";
-
-    return j;
-}
-
-void from_json(const Json &j, EOPSTemplateEngine::Azure::Compute::ImageReference &s) {
-    s.id = j.at("id");
-    s.offer = j.at("offer");
-    s.publisher = j.at("publisher");
-    s.sku = j.at("sku");
-    s.version = j.at("version");
-}
-
-std::string EOPSTemplateEngine::Azure::Compute::ImageReference::getVersion() {
-    return this->version;
-}
-
-std::string EOPSTemplateEngine::Azure::Compute::ImageReference::getSku() {
-    return this->sku;
-}
-
-std::string EOPSTemplateEngine::Azure::Compute::ImageReference::getOffer() {
-    return this->offer;
-}
-
-void EOPSTemplateEngine::Azure::Compute::ImageReference::setDefault() {
-    this->offer = "UbuntuServer";
-    this->publisher = "Canonical";
-    this->version = "latest";
-}
+    void from_json(const Json &j, ImageReference &s) {
+        s.offer = j.at("offer");
+        s.publisher = j.at("publisher");
+        s.sku = j.at("sku");
+        s.version = j.at("version");
+    }
 
 // storage profile
-Json EOPSTemplateEngine::Azure::Compute::StorageProfile::ToJson() {
-    Json j = Json::object();
+    Json StorageProfile::ToJson() {
+        Json j = Json::object();
 
-    j["imageReference"] = this->imageReference.ToJson();
+        j["imageReference"] = this->imageReference;
 
-    return j;
-}
+        return j;
+    }
 
-void EOPSTemplateEngine::Azure::Compute::StorageProfile::setImageReference(
-        EOPSTemplateEngine::Azure::Compute::ImageReference &ref) {
-    this->imageReference = ref;
+    void StorageProfile::setImageReference(
+            ImageReference &ref) {
+        this->imageReference = ref;
+    }
 }
