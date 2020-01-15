@@ -1,8 +1,10 @@
 #include "helperFunctions.hpp"
 #include <iostream>
 #include <sstream>
+#include <math.h>
+#include <cstring>
 
-namespace EOPSNativeLib::Helpers {
+namespace EOPSTemplateEngine::Helpers {
     int HelperFunctions::DamerauLevenshtein(const char A[2000], const char B[2000], int m, int n) {
         int table[m + 1][n + 1];
 
@@ -64,7 +66,6 @@ namespace EOPSNativeLib::Helpers {
 
     int
     HelperFunctions::returnIndexOfClosestVersion(std::string &requiredVersion, std::vector<std::string> &allVersions) {
-        std::cout << requiredVersion << std::endl;
         char reqArr[requiredVersion.size() + 1];
         requiredVersion.copy(reqArr, requiredVersion.size() + 1);
         reqArr[requiredVersion.size()] = '\0';
@@ -75,8 +76,6 @@ namespace EOPSNativeLib::Helpers {
         std::string bestVal;
 
         for (auto &version: allVersions) {
-            std::cout << "best currentValue " << bestIndex << std::endl;
-            std::cout << "best currentString " << bestVal << std::endl;
             int currentValue = 0;
 
             char newVersion[version.size() + 1];
@@ -88,7 +87,6 @@ namespace EOPSNativeLib::Helpers {
                     break;
                 }
 
-                std::cout << reqArr[i] << newVersion[i] << std::endl;
                 if (reqArr[i] == newVersion[i]) {
                     currentValue += 1;
                 }
@@ -100,9 +98,6 @@ namespace EOPSNativeLib::Helpers {
                 bestCurrentValue = currentValue;
             }
 
-            std::cout << "best currentValue after " << bestIndex << std::endl;
-            std::cout << "best currentString after " << bestVal << std::endl;
-            std::cout << "=======" << std::endl;
             currentIndex += 1;
         }
 
@@ -121,22 +116,17 @@ namespace EOPSNativeLib::Helpers {
         fStr[stringToMatchAgainst.size()] = '\0';
 
         for (auto &str: possibleValues) {
-            std::cout << "Doing " << str << std::endl;
             char sStr[str.size() + 1];
             str.copy(sStr, str.size() + 1);
             sStr[str.size()] = '\0';
 
             int val = DamerauLevenshtein(fStr, sStr, stringToMatchAgainst.size(), str.size());
-            std::cout << val << ' ' << bestCurrentValue << " " << std::endl;
             if (val < bestCurrentValue) {
                 bestIndex = currentIndex;
                 bestString = str;
                 bestCurrentValue = val;
             }
             currentIndex += 1;
-
-            std::cout << "Best string so far: " << bestString << "." << std::endl;
-            std::cout << "======" << std::endl;
         }
 
 //        auto pair = new std::pair<std::string, int>(bestString, bestIndex);
@@ -151,5 +141,49 @@ namespace EOPSNativeLib::Helpers {
             tokens.push_back(token);
         }
         return tokens;
+    }
+
+    double HelperFunctions::degreeToRadians(double degrees) {
+       return degrees * (M_PI / 180);
+    }
+
+// HAVERSINE FORMULA assuming Earth is a perfect sphere
+/*
+https://community.esri.com/servlet/JiveServlet/downloadImage/38-57595-375715/Circle-trig6_svg.png
+a = sin²(φB - φA/2) + cos φA * cos φB * sin²(λB - λA/2)
+c = 2 * atan2( √a, √(1−a) )
+d = R ⋅ c
+*/
+    int HelperFunctions::getClosestRegionPerCoordinates(double lat, double lon, std::vector<std::pair<double, double>> availableCoordinates) {
+        int bestIndex = -1;
+        int currentIndex = 0;
+        double currentBestDistance = 9999999;
+
+        for(auto const &[latitude, longitude]: availableCoordinates) {
+            double lat1InRad = degreeToRadians(lat);
+            double lat2InRad = degreeToRadians(latitude);
+
+            double differenceLat = (latitude - lat) * 
+                            M_PI / 180.0; 
+            double differenceLon = (longitude - lon) *  
+                            M_PI / 180.0; 
+
+            double a = pow(sin(differenceLat / 2), 2) +  
+                   (pow(sin(differenceLon / 2), 2) *  
+                   cos(lat1InRad) * cos(lat2InRad)); 
+
+            double rad = 6371; 
+            double c = 2 * asin(sqrt(a)); 
+            double distance = rad * c; 
+
+            if(currentBestDistance > distance) {
+                currentBestDistance = distance;
+                bestIndex = currentIndex;
+            }
+
+            currentIndex += 1;
+        }
+
+        return bestIndex;
     }
 } // namespace EOPSNativeLib::Lib

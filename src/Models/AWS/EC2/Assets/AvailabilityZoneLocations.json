@@ -1,0 +1,154 @@
+[
+    {
+        "zone": "us-east-2",
+        "lat": 40.2253569,
+        "lon": -82.6881395,
+        "availableResources": [
+            "AWS::EC2::Instance"
+        ]
+    },
+    {
+        "zone": "us-east-1",
+        "lat": 37.926868,
+        "lon": -78.024902,
+        "availableResources": [
+            "AWS::EC2::Instance"
+        ]
+    },
+    {
+        "zone": "us-west-1",
+        "lat": 35.6729639,
+        "lon": -79.0392919,
+        "availableResources": [
+            "AWS::EC2::Instance"
+        ]
+    },
+    {
+        "zone": "us-west-2",
+        "lat": 43.9792797,
+        "lon": -120.737257,
+        "availableResources": [
+            "AWS::EC2::Instance"
+        ]
+    },
+    {
+        "zone": "ap-east-1",
+        "lat": 22.2793278,
+        "lon": 114.1628131,
+        "availableResources": [
+            "AWS::EC2::Instance"
+        ]
+    },
+    {
+        "zone": "ap-south-1",
+        "lat": 18.9387711,
+        "lon": 72.8353355,
+        "availableResources": [
+            "AWS::EC2::Instance"
+        ]
+    },
+    {
+        "zone": "ap-northeast-3",
+        "lat": 34.6198813,
+        "lon": 135.490357,
+        "availableResources": [
+            "AWS::EC2::Instance"
+        ]
+    },
+    {
+        "zone": "ap-northeast-2",
+        "lat": 37.5666791,
+        "lon": 126.9782914,
+        "availableResources": [
+            "AWS::EC2::Instance"
+        ]
+    },
+    {
+        "zone": "ap-southeast-1",
+        "lat": 1.3408630000000001,
+        "lon": 103.83039182212079,
+        "availableResources": [
+            "AWS::EC2::Instance"
+        ]
+    },
+    {
+        "zone": "ap-southeast-2",
+        "lat": -33.8548157,
+        "lon": 151.2164539,
+        "availableResources": [
+            "AWS::EC2::Instance"
+        ]
+    },
+    {
+        "zone": "ap-northeast-1",
+        "lat": 35.6828387,
+        "lon": 139.7594549,
+        "availableResources": [
+            "AWS::EC2::Instance"
+        ]
+    },
+    {
+        "zone": "ca-central-1",
+        "lat": 61.0666922,
+        "lon": -107.9917071,
+        "availableResources": [
+            "AWS::EC2::Instance"
+        ]
+    },
+    {
+        "zone": "eu-central-1",
+        "lat": 50.1106444,
+        "lon": 8.6820917,
+        "availableResources": [
+            "AWS::EC2::Instance"
+        ]
+    },
+    {
+        "zone": "eu-west-1",
+        "lat": 53.3497645,
+        "lon": -6.2602732,
+        "availableResources": [
+            "AWS::EC2::Instance"
+        ]
+    },
+    {
+        "zone": "eu-west-2",
+        "lat": 51.5073219,
+        "lon": -0.1276474,
+        "availableResources": [
+            "AWS::EC2::Instance"
+        ]
+    },
+    {
+        "zone": "eu-west-3",
+        "lat": 48.8566969,
+        "lon": 2.3514616,
+        "availableResources": [
+            "AWS::EC2::Instance"
+        ]
+    },
+    {
+        "zone": "eu-north-1",
+        "lat": 59.3251172,
+        "lon": 18.0710935,
+        "availableResources": [
+            "AWS::EC2::Instance"
+        ]
+    },
+    {
+        "zone": "me-south-1",
+        "lat": 26.1551249,
+        "lon": 50.5344606,
+        "availableResources": [
+            "AWS::EC2::Instance"
+        ]
+    },
+    {
+        "zone": "sa-east-1",
+        "lat": -23.5506507,
+        "lon": -46.6333824,
+        "availableResources": [
+            "AWS::EC2::Instance"
+        ]
+    }
+]

@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cmake-js compile",
     "prebuild": "cmake-js build",
-    "test-run-changes": "cmake-js compile && node index.js"
+    "postinstall": "npx cmake-js"
   },
   "repository": {
     "type": "git",

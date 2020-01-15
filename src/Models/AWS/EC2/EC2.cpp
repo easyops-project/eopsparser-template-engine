@@ -2,10 +2,6 @@
 #include "../../Generics/InstanceType.hpp"
 #include <fstream>
 #include <iostream>
-//#include <aws/core/Aws.h>
-//#include <aws/EC2/EC2Client.h>
-//#include <aws/EC2/model/DescribeImagesRequest.h>
-//#include <aws/EC2/model/DescribeImagesOutcome.h>
 
 namespace EOPSTemplateEngine::AWS::EC2 {
     Instance::Instance(std::string &name) : GenericAWSResource("AWS::EC2::Instance") {
@@ -19,6 +15,7 @@ namespace EOPSTemplateEngine::AWS::EC2 {
 
     void Instance::setAvailabilityZoneFromString(std::string zone) {
         std::string aZone = this->getAvailabilityZoneFromString(zone);
+
         this->AvailabilityZone = aZone;
     }
 
@@ -26,7 +23,7 @@ namespace EOPSTemplateEngine::AWS::EC2 {
         ElasticGPUAccelerator gpu;
 
         if (vram != 1 && vram != 2 && vram != 4 && vram != 8) {
-//            std::cout << "Your GPU VRAM value is invalid. Will match to the closest value..." << std::endl;
+           std::cout << "Your GPU VRAM value is invalid. Will match to the closest value..." << std::endl;
         }
 
         if (vram <= 1) gpu.Type = "eg1.medium";
@@ -75,7 +72,9 @@ namespace EOPSTemplateEngine::AWS::EC2 {
             if (!isFound) {
                 std::cout << "Did not find a match...";
                 std::cout << "Using: " << instanceTypes[0].name << std::endl;
-                chosenInstance = &instanceTypes[0];
+                chosenInstance->cpu = instanceTypes[0].cpu;
+                chosenInstance->ram = instanceTypes[0].ram;
+                chosenInstance->name = instanceTypes[0].name;
             } else {
                 std::cout << "Chosen type: \n- " << chosenInstance->name << " \n- "
                           << chosenInstance->cpu << " cpus \n- " << chosenInstance->ram
@@ -134,6 +133,7 @@ namespace EOPSTemplateEngine::AWS::EC2 {
         properties["InstanceType"] = this->InstanceType;
 //        j["KeyName"] = this->KeyName;
         properties["Monitoring"] = this->Monitoring;
+        properties["AvailabilityZone"] = this->AvailabilityZone;
 //        j["SubnetId"] = this->SubnetId;
         //        j["Tags"] = tags;
 //        j["UserData"] = this->UserData;

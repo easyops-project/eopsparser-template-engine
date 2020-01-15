@@ -1,0 +1,1102 @@
+[
+    {
+        "zone": "South Africa North",
+        "lat": -26.195246,
+        "lon": 28.034088,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "South Africa West",
+        "lat": -33.918861,
+        "lon": 18.423300,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "East Asia",
+        "lat": 21.4888223,
+        "lon": -104.8697314,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "Southeast Asia",
+        "lat": 1.3408630000000001,
+        "lon": 103.83039182212079,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}s",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_L[A-Za-z0-9]{0,}s",
+            "Standard_L[A-Za-z0-9]{0,}s_v2",
+            "Standard_M[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}_v22",
+            "Standard_NC[A-Za-z0-9]{0,}_v2",
+            "Standard_NC[A-Za-z0-9]{0,}s_v2",
+            "Standard_NC[A-Za-z0-9]{0,}s_v3",
+            "Standard_ND[A-Za-z0-9]{0,}",
+            "Standard_NV[A-Za-z0-9]{0,}",
+            "Standard_NV[A-Za-z0-9]{0,}_v3",
+        ]
+    },
+    {
+        "zone": "Australia Central",
+        "lat": -35.2975906,
+        "lon": 149.1012676,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "Australia East",
+        "lat": -31.8759835,
+        "lon": 147.2869493,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}s",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_L[A-Za-z0-9]{0,}s",
+            "Standard_M[A-Za-z0-9]{0,}",
+            "Standard_NC[A-Za-z0-9]{0,}",
+            "Standard_NC[A-Za-z0-9]{0,}_v2",
+            "Standard_NC[A-Za-z0-9]{0,}s_v3",
+            "Standard_NV[A-Za-z0-9]{0,}",
+            "Standard_NV[A-Za-z0-9]{0,}_v3",
+        ]
+    },
+    {
+        "zone": "Australia Southeast",
+        "lat": -36.5986096,
+        "lon": 144.6780052,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "Brazil South",
+        "lat": -23.5506507,
+        "lon": -46.6333824,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}s",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_L[A-Za-z0-9]{0,}s",
+            "Standard_M[A-Za-z0-9]{0,}",
+            "Standard_NC[A-Za-z0-9]{0,}s_v3"
+        ]
+    },
+    {
+        "zone": "Canada Central",
+        "lat": 43.653963,
+        "lon": -79.387207,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}s",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_L[A-Za-z0-9]{0,}s",
+            "Standard_M[A-Za-z0-9]{0,}",
+            "Standard_NC[A-Za-z0-9]{0,}s_v3"
+        ]
+    },
+    {
+        "zone": "Canada East",
+        "lat": 46.8259601,
+        "lon": -71.2352226,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}s",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_L[A-Za-z0-9]{0,}s",
+            "Standard_M[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "China East 2",
+        "lat": 31.2252985,
+        "lon": 121.4890497,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_L[A-Za-z0-9]{0,}s",
+            "Standard_M[A-Za-z0-9]{0,}",
+            "Standard_NC[A-Za-z0-9]{0,}s_v3"
+        ]
+    },
+    {
+        "zone": "China North 2",
+        "lat": 39.906217,
+        "lon": 116.3912757,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_L[A-Za-z0-9]{0,}s",
+            "Standard_M[A-Za-z0-9]{0,}",
+            "Standard_NC[A-Za-z0-9]{0,}s_v3"
+        ]
+    },
+    {
+        "zone": "North Europe",
+        "lat": 52.865196,
+        "lon": -7.9794599,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}s",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_L[A-Za-z0-9]{0,}s",
+            "Standard_L[A-Za-z0-9]{0,}s_v2",
+            "Standard_M[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}_v22",
+            "Standard_NC[A-Za-z0-9]{0,}",
+            "Standard_NC[A-Za-z0-9]{0,}_v2",
+            "Standard_NV[A-Za-z0-9]{0,}",
+            "Standard_NV[A-Za-z0-9]{0,}_v3"
+        ]
+    },
+    {
+        "zone": "West Europe",
+        "lat": 52.5001698,
+        "lon": 5.7480821,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}s",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_L[A-Za-z0-9]{0,}s",
+            "Standard_L[A-Za-z0-9]{0,}s_v2",
+            "Standard_M[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}_v22",
+            "Standard_NC[A-Za-z0-9]{0,}",
+            "Standard_NC[A-Za-z0-9]{0,}_v2",
+            "Standard_NC[A-Za-z0-9]{0,}s_v2",
+            "Standard_NC[A-Za-z0-9]{0,}s_v3",
+            "Standard_ND[A-Za-z0-9]{0,}",
+            "Standard_ND[A-Za-z0-9]{0,}s_v2",
+            "Standard_NV[A-Za-z0-9]{0,}",
+            "Standard_NV[A-Za-z0-9]{0,}_v3",
+            "Standard_NV[A-Za-z0-9]{0,}_v4"
+        ]
+    },
+    {
+        "zone": "France Central",
+        "lat": 48.8566969,
+        "lon": 2.3514616,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "France South",
+        "lat": 43.2961743,
+        "lon": 5.3699525,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "Germany Central",
+        "lat": 50.1106444,
+        "lon": 8.6820917,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}s",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_L[A-Za-z0-9]{0,}s",
+            "Standard_M[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "Germany North",
+        "lat": 52.5170365,
+        "lon": 13.3888599,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "Germany Northeast",
+        "lat": 52.1315889,
+        "lon": 11.6399609,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}_v22"
+        ]
+    },
+    {
+        "zone": "Central India",
+        "lat": 18.521428,
+        "lon": 73.8544541,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}",
+            "Standard_NC[A-Za-z0-9]{0,}s_v3",
+            "Standard_NV[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "South India",
+        "lat": 13.0801721,
+        "lon": 80.2838331,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "West India",
+        "lat": 18.9387711,
+        "lon": 72.8353355,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "Japan East",
+        "lat": 35.6828387,
+        "lon": 139.7594549,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}s",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_L[A-Za-z0-9]{0,}s",
+            "Standard_M[A-Za-z0-9]{0,}",
+            "Standard_NC[A-Za-z0-9]{0,}s_v3",
+            "Standard_NV[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "Japan West",
+        "lat": 34.6198813,
+        "lon": 135.490357,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "Korea Central",
+        "lat": 37.5666791,
+        "lon": 126.9782914,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}",
+            "Standard_NC[A-Za-z0-9]{0,}s_v3"
+        ]
+    },
+    {
+        "zone": "Korea South",
+        "lat": 35.1799528,
+        "lon": 129.0752365,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "Norway East",
+        "lat": 59.9133301,
+        "lon": 10.7389701,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "Norway West",
+        "lat": 58.9689601,
+        "lon": 5.7294654,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "Switzerland North",
+        "lat": 47.3723941,
+        "lon": 8.5423328,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "Switzerland West",
+        "lat": 46.2017559,
+        "lon": 6.1466014,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "UAE Central",
+        "lat": 24.39647445,
+        "lon": 54.536663086435915,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "UAE North",
+        "lat": 25.0657,
+        "lon": 55.1713,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",    
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "UK South",
+        "lat": 51.5073219,
+        "lon": -0.1276474,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}s",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_L[A-Za-z0-9]{0,}s",
+            "Standard_M[A-Za-z0-9]{0,}",
+            "Standard_NC[A-Za-z0-9]{0,}",
+            "Standard_NC[A-Za-z0-9]{0,}s_v3",
+            "Standard_NV[A-Za-z0-9]{0,}",
+            "Standard_NV[A-Za-z0-9]{0,}_v3",
+            "Standard_NV[A-Za-z0-9]{0,}_v4"
+        ]
+    },
+    {
+        "zone": "UK West",
+        "lat": 51.4816546,
+        "lon": -3.1791934,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}",
+        ]
+    },
+    {
+        "zone": "Central US",
+        "lat": 41.9216734,
+        "lon": -93.3122705,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "East US",
+        "lat": 37.1232245,
+        "lon": -78.4927721,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_L[A-Za-z0-9]{0,}s_v2",
+            "Standard_M[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}_v22",
+            "Standard_NC[A-Za-z0-9]{0,}",
+            "Standard_NC[A-Za-z0-9]{0,}_v2",
+            "Standard_NC[A-Za-z0-9]{0,}s_v2",
+            "Standard_NC[A-Za-z0-9]{0,}s_v3",
+            "Standard_ND[A-Za-z0-9]{0,}",
+            "Standard_NV[A-Za-z0-9]{0,}",
+            "Standard_NV[A-Za-z0-9]{0,}_v3",
+        ]
+    },
+    {
+        "zone": "East US 2",
+        "lat": 37.1232245,
+        "lon": -78.4927721,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}s",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_L[A-Za-z0-9]{0,}s",
+            "Standard_L[A-Za-z0-9]{0,}s_v2",
+            "Standard_M[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}_v22",
+            "Standard_NC[A-Za-z0-9]{0,}",
+            "Standard_NV[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "North Central US",
+        "lat": 40.0796606,
+        "lon": -89.4337288,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}",
+            "Standard_NC[A-Za-z0-9]{0,}",
+            "Standard_NV[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "South Central US",
+        "lat": 31.8160381,
+        "lon": -99.5120986,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_L[A-Za-z0-9]{0,}s_v2",
+            "Standard_M[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}_v22",
+            "Standard_NC[A-Za-z0-9]{0,}",
+            "Standard_NC[A-Za-z0-9]{0,}_v2",
+            "Standard_NC[A-Za-z0-9]{0,}s_v2",
+            "Standard_NC[A-Za-z0-9]{0,}s_v3",
+            "Standard_NV[A-Za-z0-9]{0,}",
+            "Standard_NV[A-Za-z0-9]{0,}_v3"
+        ]
+    },
+    {
+        "zone": "West Central US",
+        "lat": 43.1700264,
+        "lon": -107.5685348,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}"
+        ]
+    },
+    {
+        "zone": "West US",
+        "lat": 36.7014631,
+        "lon": -118.7559974,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}s",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_L[A-Za-z0-9]{0,}s",
+            "Standard_NV[A-Za-z0-9]{0,}_v3",
+        ]
+    },
+    {
+        "zone": "West US 2",
+        "lat": 47.2868352,
+        "lon": -120.2126139,
+        "availableResources": [
+            "Microsoft.Compute/virtualMachines"
+        ],
+        "enabledVMSizes": [
+            "Standard_A.{0,}",
+            "Standard_B.{0,}",
+            "Standard_D[A-Za-z0-9]{0,}s_v3",
+            "Standard_D[A-Za-z0-9]{0,}as_v4",
+            "Standard_D[A-Za-z0-9]{0,}_v3",
+            "Standard_D[A-Za-z0-9]{0,}_v2",
+            "Standard_DS[A-Za-z0-9]{0,}_v2",
+            "Standard_E[A-Za-z0-9]{0,}_v3",
+            "Standard_E[A-Za-z0-9]{0,}s_v3",   
+            "Standard_F[A-Za-z0-9]{0,}s_v2", 
+            "Standard_F[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}",
+            "Standard_G[A-Za-z0-9]{0,}s",
+            "Standard_H[A-Za-z0-9]{0,}",
+            "Standard_L[A-Za-z0-9]{0,}s",
+            "Standard_L[A-Za-z0-9]{0,}s_v2",
+            "Standard_M[A-Za-z0-9]{0,}",
+            "Standard_M[A-Za-z0-9]{0,}_v22",
+            "Standard_NC[A-Za-z0-9]{0,}",
+            "Standard_NC[A-Za-z0-9]{0,}_v2",
+            "Standard_NC[A-Za-z0-9]{0,}s_v2",
+            "Standard_NC[A-Za-z0-9]{0,}s_v3",
+            "Standard_ND[A-Za-z0-9]{0,}",
+            "Standard_NV[A-Za-z0-9]{0,}"
+        ]
+    }
+]

@@ -86,7 +86,10 @@ namespace EOPSTemplateEngine::Azure::Compute {
         if (!res->GPUs.empty()) {
             optimisation = "GPU";
         }
-        this->setInstanceType(res->OS, res->Cores, res->Ram, optimisation);
+        
+        if(this->getLocation() != "DEFAULT_OVERRIDE") this->setInstanceType(res->OS, res->Cores, res->Ram, optimisation);
+        else this->setInstanceType(res->OS, 1.0, 1.0);
+
         this->setOs(res->OS);
     }
 
@@ -96,11 +99,10 @@ namespace EOPSTemplateEngine::Azure::Compute {
         std::string latest = "latest";
 
         if (os.find('@') != std::string::npos) {
-            std::vector<std::string> split = EOPSNativeLib::Helpers::HelperFunctions::splitStringByDelimiter(os, '@');
+            std::vector<std::string> split = Helpers::HelperFunctions::splitStringByDelimiter(os, '@');
 
             operatingSystem = split[0];
             version = split[1];
-            std::cout << operatingSystem << " " << version;
         }
 
         std::ifstream jsonFile;
@@ -126,8 +128,7 @@ namespace EOPSTemplateEngine::Azure::Compute {
                     for (auto &l: s) {
                         allSkus.push_back(l.sku);
                     }
-                    int index = EOPSNativeLib::Helpers::HelperFunctions::returnIndexOfClosestVersion(version, allSkus);
-                    std::cout << index << std::endl;
+                    int index = Helpers::HelperFunctions::returnIndexOfClosestVersion(version, allSkus);
                     this->storageProfile->setImageReference(s[index]);
                 }
             } else if (operatingSystem.find("CENTOS") != std::string::npos) {
@@ -153,7 +154,7 @@ namespace EOPSTemplateEngine::Azure::Compute {
                     for (auto &l: s) {
                         allVersions.push_back(l.version);
                     }
-                    int index = EOPSNativeLib::Helpers::HelperFunctions::returnIndexOfClosestVersion(version,
+                    int index = Helpers::HelperFunctions::returnIndexOfClosestVersion(version,
                                                                                                      allVersions);
                     this->storageProfile->setImageReference(s[index]);
                 }
@@ -163,7 +164,7 @@ namespace EOPSTemplateEngine::Azure::Compute {
                 for (auto &l: s) {
                     allVersions.push_back(l.version);
                 }
-                int index = EOPSNativeLib::Helpers::HelperFunctions::returnIndexOfClosestVersion(version, allVersions);
+                int index = Helpers::HelperFunctions::returnIndexOfClosestVersion(version, allVersions);
                 this->storageProfile->setImageReference(s[index]);
             } else if (operatingSystem.find("DEBIAN") != std::string::npos) {
                 std::vector<ImageReference> s = j.at("DEBIAN");
@@ -199,7 +200,7 @@ namespace EOPSTemplateEngine::Azure::Compute {
                     for (auto &l: s) {
                         allSkus.push_back(l.sku);
                     }
-                    int index = EOPSNativeLib::Helpers::HelperFunctions::returnIndexOfClosestVersion(version, allSkus);
+                    int index = Helpers::HelperFunctions::returnIndexOfClosestVersion(version, allSkus);
                     this->storageProfile->setImageReference(s[index]);
                 }
             } else if (operatingSystem.find("SLES") != std::string::npos) {
@@ -229,7 +230,7 @@ namespace EOPSTemplateEngine::Azure::Compute {
                     for (auto &l: s) {
                         allSkus.push_back(l.sku);
                     }
-                    int index = EOPSNativeLib::Helpers::HelperFunctions::returnIndexOfClosestVersion(version, allSkus);
+                    int index = Helpers::HelperFunctions::returnIndexOfClosestVersion(version, allSkus);
                     this->storageProfile->setImageReference(s[index]);
                 }
             } else if (operatingSystem.find("WINDOWS") != std::string::npos) {
@@ -239,7 +240,7 @@ namespace EOPSTemplateEngine::Azure::Compute {
                 for (auto &l: s) {
                     allSkus.push_back(l.sku);
                 }
-                int index = EOPSNativeLib::Helpers::HelperFunctions::returnIndexOfClosestVersion(version, allSkus);
+                int index = Helpers::HelperFunctions::returnIndexOfClosestVersion(version, allSkus);
                 this->storageProfile->setImageReference(s[index]);
             } else {
                 std::vector<ImageReference> s = j.at("UBUNTU");
@@ -252,7 +253,7 @@ namespace EOPSTemplateEngine::Azure::Compute {
                 for (auto &l: s) {
                     allSkus.push_back(l.sku);
                 }
-                int index = EOPSNativeLib::Helpers::HelperFunctions::returnIndexOfClosestVersion(latest, allSkus);
+                int index = Helpers::HelperFunctions::returnIndexOfClosestVersion(latest, allSkus);
                 this->storageProfile->setImageReference(s[index]);
             }
         } else {

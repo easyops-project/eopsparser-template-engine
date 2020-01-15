@@ -4,6 +4,11 @@ project(eopstemplateengine) # setting the project name
 
 add_definitions(-DNAPI_VERSION=4) # adding NAPI V4 Def
 
+# add curl
+set(CURL_LIBRARY "-lcurl") 
+find_package(CURL REQUIRED) 
+include_directories(${CURL_INCLUDE_DIR})
+
 # add library files
 include_directories(lib/EasyOps-Native-Lib/include) #include the native lib
 include_directories(lib/nlohmann) #include the native lib
@@ -13,13 +18,20 @@ add_subdirectory(lib/EasyOps-Native-Lib)
 file(GLOB_RECURSE SOURCE_FILES "src/*.cpp") # add all source files
 add_library(${PROJECT_NAME} SHARED ${SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME} eopslibrary)
+target_link_libraries(${PROJECT_NAME} ${CURL_LIBRARIES})
 
 
 #add stuff
+
+#aws
 add_definitions("-DAWS_INSTANCES=\"${CMAKE_SOURCE_DIR}/src/Models/AWS/EC2/Assets/InstanceType.json\"")
+add_definitions("-DAWS_AVAILABILITY_ZONES=\"${CMAKE_SOURCE_DIR}/src/Models/AWS/EC2/Assets/AvailabilityZoneLocations.json\"")
+
+#azure
 add_definitions("-DAZURE_WINDOWS_INSTANCES=\"${CMAKE_SOURCE_DIR}/src/Models/Azure/Compute/Assets/WindowsInstanceType.json\"")
 add_definitions("-DAZURE_LINUX_INSTANCES=\"${CMAKE_SOURCE_DIR}/src/Models/Azure/Compute/Assets/LinuxInstanceType.json\"")
 add_definitions("-DAZURE_OS_IMAGES=\"${CMAKE_SOURCE_DIR}/src/Models/Azure/Compute/Assets/OsImages.json\"")
+add_definitions("-DAZURE_AVAILABILITY_ZONES=\"${CMAKE_SOURCE_DIR}/src/Models/Azure/Compute/Assets/AzureAvailabilityZones.json\"")
 
 # set properties
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 17)

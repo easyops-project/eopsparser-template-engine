@@ -6,7 +6,7 @@ namespace EOPSTemplateEngine::Generics {
         s.ram = j.at("ram");
         s.name = j.at("name");
 
-        if (s.isGPUEnabled != std::nullopt) s.isGPUEnabled = j.at("isGPUEnabled");
+        if (j.count("isGPUEnabled") != 0) s.isGPUEnabled = j.at("isGPUEnabled");
     };
 
     bool sortByCpuAndRam(const InstanceType &a, const InstanceType &b) {

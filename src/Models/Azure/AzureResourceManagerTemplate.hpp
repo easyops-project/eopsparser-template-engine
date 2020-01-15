@@ -1,8 +1,8 @@
 #if !defined(AZURE_RESOURCE_TEMPLATE)
 #define AZURE_RESOURCE_TEMPLATE
 
-#import "../Generics/GenericTemplate.hpp"
-#import "GenericAzureResource.hpp"
+#include "../Generics/GenericTemplate.hpp"
+#include "GenericAzureResource.hpp"
 #include <string>
 
 namespace EOPSTemplateEngine::Azure {

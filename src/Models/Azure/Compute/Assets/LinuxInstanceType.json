@@ -161,46 +161,6 @@
       "ram": 256.0
     },
     {
-      "name": "Standard_D2a_v4",
-      "cpu": 2.0,
-      "ram": 8.0
-    },
-    {
-      "name": "Standard_D4a_v4",
-      "cpu": 4.0,
-      "ram": 16.0
-    },
-    {
-      "name": "Standard_D8a_v4",
-      "cpu": 8.0,
-      "ram": 32.0
-    },
-    {
-      "name": "Standard_D16a_v4",
-      "cpu": 16.0,
-      "ram": 64.0
-    },
-    {
-      "name": "Standard_D32a_v4",
-      "cpu": 32.0,
-      "ram": 128.0
-    },
-    {
-      "name": "Standard_D48a_v4",
-      "cpu": 48.0,
-      "ram": 192.0
-    },
-    {
-      "name": "Standard_D64a_v4",
-      "cpu": 64.0,
-      "ram": 256.0
-    },
-    {
-      "name": "Standard_D96a_v4",
-      "cpu": 96.0,
-      "ram": 384.0
-    },
-    {
       "name": "Standard_DS1_v2",
       "cpu": 1.0,
       "ram": 3.5
@@ -284,16 +244,6 @@
       "name": "Standard_A8m_v2",
       "cpu": 8.0,
       "ram": 64.0
-    },
-    {
-      "name": "Standard_DC2s",
-      "cpu": 2.0,
-      "ram": 8.0
-    },
-    {
-      "name": "Standard_DC4s",
-      "cpu": 4.0,
-      "ram": 16.0
     }
   ],
   "CPU": [
@@ -385,51 +335,6 @@
       "ram": 432.0
     },
     {
-      "name": "Standard_E2as_v4",
-      "cpu": 2.0,
-      "ram": 16.0
-    },
-    {
-      "name": "Standard_E4as_v4",
-      "cpu": 4.0,
-      "ram": 32.0
-    },
-    {
-      "name": "Standard_E8as_v4",
-      "cpu": 8.0,
-      "ram": 64.0
-    },
-    {
-      "name": "Standard_E16as_v4",
-      "cpu": 16.0,
-      "ram": 128.0
-    },
-    {
-      "name": "Standard_E20as_v4",
-      "cpu": 20.0,
-      "ram": 160.0
-    },
-    {
-      "name": "Standard_E32as_v4",
-      "cpu": 32.0,
-      "ram": 256.0
-    },
-    {
-      "name": "Standard_E48as_v4",
-      "cpu": 48.0,
-      "ram": 384.0
-    },
-    {
-      "name": "Standard_E64as_v4",
-      "cpu": 64.0,
-      "ram": 512.0
-    },
-    {
-      "name": "Standard_E96as_v4",
-      "cpu": 96.0,
-      "ram": 672.0
-    },
-    {
       "name": "Standard_E2_v3",
       "cpu": 2.0,
       "ram": 16.0
@@ -473,51 +378,6 @@
       "name": "Standard_E64i_v3",
       "cpu": 64.0,
       "ram": 432.0
-    },
-    {
-      "name": "Standard_E2a_v4",
-      "cpu": 2.0,
-      "ram": 16.0
-    },
-    {
-      "name": "Standard_E4a_v4",
-      "cpu": 4.0,
-      "ram": 32.0
-    },
-    {
-      "name": "Standard_E8a_v4",
-      "cpu": 8.0,
-      "ram": 64.0
-    },
-    {
-      "name": "Standard_E16a_v4",
-      "cpu": 16.0,
-      "ram": 128.0
-    },
-    {
-      "name": "Standard_E20a_v4",
-      "cpu": 20.0,
-      "ram": 160.0
-    },
-    {
-      "name": "Standard_E32a_v4",
-      "cpu": 32.0,
-      "ram": 256.0
-    },
-    {
-      "name": "Standard_E48a_v4",
-      "cpu": 48.0,
-      "ram": 384.0
-    },
-    {
-      "name": "Standard_E64a_v4",
-      "cpu": 64.0,
-      "ram": 512.0
-    },
-    {
-      "name": "Standard_E96a_v4",
-      "cpu": 96.0,
-      "ram": 672.0
     },
     {
       "name": "Standard_M208ms_v22",

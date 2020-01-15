@@ -18,8 +18,9 @@ namespace EOPSTemplateEngine::Azure {
         void setType(std::string &resourceType);
 
     public:
+        std::string getLocation();
         explicit GenericAzureResource(std::string &name, std::string &resourceType, std::string &location);
-
+        std::string getAvailabilityZoneFromString(std::string zone, std::string currentType);
         Json ToJson() override;
     };
 }

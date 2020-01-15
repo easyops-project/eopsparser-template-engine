@@ -2,6 +2,11 @@
 #include <utility>
 #include "./GenericAWSResource.hpp"
 #include <nlohmann/json.hpp>
+#include "../../Helpers/Http/OpenMapAPI.hpp"
+#include <fstream>
+#include "../Generics/AZLocation.hpp"
+#include "../../Helpers/helperFunctions.hpp"
+#include <algorithm>
 
 using Json = nlohmann::json;
 
@@ -37,17 +42,35 @@ namespace EOPSTemplateEngine::AWS {
     }
 
     std::string GenericAWSResource::getAvailabilityZoneFromString(std::string zone) {
-        if (zone == "europe") {
-            return "eu-west-1";
-        } else if (zone == "america") {
-            return "us-east-1";
-        } else if (zone == "asia") {
-            return "ap-northeast-1";
-        } else if (zone == "china") {
-            return "cn-north-1";
-        } else {
-            std::cout << "Zone not found. Assuming europe" << std::endl;
-            return "eu-west-1";
+        std::ifstream jsonFile;
+        jsonFile.open(AWS_AVAILABILITY_ZONES);
+
+        if(jsonFile.is_open()) {
+            std::vector<Generics::AZLocation> azLocations = Json::parse(jsonFile);
+            jsonFile.close();
+
+            std::string currentType = this->Type;
+            for(auto it = azLocations.begin(); it != azLocations.end(); ++it){
+                std::vector<std::string> v = it->availableResources;
+                if(std::find(v.begin(), v.end(), currentType) == v.end()) {
+                    it = azLocations.erase(it);
+                    --it;
+                }
+            }
+         
+            auto *oma = new EOPSTemplateEngine::Helpers::HTTP::OpenMapsAPI();
+            EOPSTemplateEngine::Helpers::HTTP::GetCoordsFromQueryResponse res = oma->getCoordsFromQuery(zone);
+            
+            std::vector<std::pair<double, double>> latLongs;
+            for (const auto &az: azLocations) {
+                std::pair<double, double> pair(az.lat, az.lon);
+
+                latLongs.push_back(pair);
+            }
+
+            int index = Helpers::HelperFunctions::getClosestRegionPerCoordinates(res.lat, res.lon, latLongs);
+            std::string returnString = azLocations[index].zone;
+            return returnString;
         }
     }
 } // namespace EOPSTemplateEngine::AWS
