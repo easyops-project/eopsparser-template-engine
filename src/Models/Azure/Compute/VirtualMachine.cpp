@@ -5,6 +5,10 @@
 #include "../../../Helpers/helperFunctions.hpp"
 #include <vector>
 #include "StorageProfile.hpp"
+#include <regex>
+#include <nlohmann/json.hpp>
+
+using Json = nlohmann::json;
 
 namespace EOPSTemplateEngine::Azure::Compute {
     VirtualMachine::VirtualMachine(std::string &name, std::string &resourceType, std::string &location)
@@ -80,6 +84,44 @@ namespace EOPSTemplateEngine::Azure::Compute {
         this->hardwareProfile->setVMSize(chosenInstance->name);
     }
 
+    std::vector<Generics::AZLocation> VirtualMachine::getAZs() {
+        std::vector<Generics::AZLocation> azLocations;
+        std::ifstream jsonFile;
+        jsonFile.open(AZURE_AVAILABILITY_ZONES);
+
+        if(jsonFile.is_open()) {
+            std::vector<Generics::AZLocation> azLocations = Json::parse(jsonFile);
+            jsonFile.close();
+
+            for(auto it = azLocations.begin(); it != azLocations.end(); ++it){
+                std::vector<std::string> v = it->availableResources;
+                if(std::find(v.begin(), v.end(), this->getType()) == v.end()) {
+                    it = azLocations.erase(it);
+                    --it;
+                } else {
+                    if(this->getType() == "Microsoft.Compute/virtualMachines") {
+                        std::string regexBuilder = "(";
+                        for(const std::string &str: it->enabledVMSizes.value()) {
+                            regexBuilder += str + '|';
+                        }
+                        regexBuilder.pop_back();
+                        regexBuilder += ")";
+
+                        std::regex r{regexBuilder};
+                        std::smatch s;
+
+                        if(!std::regex_match(this->getType(), r)) {
+                            it = azLocations.erase(it);
+                            --it;
+                        }
+                    }
+                }
+            }
+
+            return azLocations;
+        }
+    }
+
     void VirtualMachine::setFromParsedResource(EOPSNativeLib::Models::VirtualMachine *res) {
         std::string optimisation = res->Optimisation;
 
@@ -88,7 +130,10 @@ namespace EOPSTemplateEngine::Azure::Compute {
         }
         
         if(this->getLocation() != "DEFAULT_OVERRIDE") this->setInstanceType(res->OS, res->Cores, res->Ram, optimisation);
-        else this->setInstanceType(res->OS, 1.0, 1.0);
+        else {
+            optimisation = "COST";
+            this->setInstanceType(res->OS, 1.0, 1.0, optimisation);
+        }
 
         this->setOs(res->OS);
     }

@@ -16,13 +16,14 @@ namespace EOPSTemplateEngine::Azure::Compute {
         void setInstanceType(std::string &os, float cpu, float ram, std::string &optimisation);
 
         void setOs(std::string &os);
-
+        std::vector<Generics::AZLocation> getAZs() override;
     public:
         explicit VirtualMachine(std::string &name, std::string &resourceType, std::string &location);
 
         void setFromParsedResource(
                 EOPSNativeLib::Models::VirtualMachine *res);
 
+        std::string getAvailabilityZoneFromString(std::string zone, std::string currentType);
         Json ToJson() override;
     };
 }

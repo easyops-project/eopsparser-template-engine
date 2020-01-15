@@ -1,11 +1,9 @@
 #include "GenericAzureResource.hpp"
-#include "fstream"
-#include "vector"
-#include "../Generics/AZLocation.hpp"
 #include "../../Helpers/helperFunctions.hpp"
 #include "../../Helpers/Http/OpenMapAPI.hpp"
+#include <iostream>
+#include <fstream>
 #include <nlohmann/json.hpp>
-
 
 using Json = nlohmann::json;
 
@@ -22,7 +20,8 @@ namespace EOPSTemplateEngine::Azure {
     }
 
     void GenericAzureResource::setLocation(std::string &location) {
-
+        std::string loc = this->getAvailabilityZoneFromString(location, this->type);
+        this->location = loc;
     }
 
     GenericAzureResource::GenericAzureResource(std::string &name, std::string &resourceType, std::string &location) {
@@ -31,6 +30,11 @@ namespace EOPSTemplateEngine::Azure {
         this->setLocation(location);
     }
 
+    std::string GenericAzureResource::getType() {
+        return this->type;
+    }
+
+
     void GenericAzureResource::setType(std::string &resourceType) {
         if (resourceType == "Virtual_Machine") {
             this->type = "Microsoft.Compute/virtualMachines";
@@ -38,11 +42,9 @@ namespace EOPSTemplateEngine::Azure {
         }
     }
 
-    std::string GenericAzureResource::getLocation() {
-        return this->location;
-    }
-
-    std::string GenericAzureResource::getAvailabilityZoneFromString(std::string zone, std::string currentType) {
+    std::vector<Generics::AZLocation> GenericAzureResource::getAZs() {
+        std::cout << "Le default run" << std::endl;
+        std::vector<Generics::AZLocation> azLocations;
         std::ifstream jsonFile;
         jsonFile.open(AZURE_AVAILABILITY_ZONES);
 
@@ -52,28 +54,25 @@ namespace EOPSTemplateEngine::Azure {
 
             for(auto it = azLocations.begin(); it != azLocations.end(); ++it){
                 std::vector<std::string> v = it->availableResources;
-                if(std::find(v.begin(), v.end(), currentType) == v.end()) {
+                if(std::find(v.begin(), v.end(), this->getType()) == v.end()) {
                     it = azLocations.erase(it);
                     --it;
-                } else {
-                    if(currentType == "Microsoft.Compute/virtualMachines") {
-                        std::string regex = "(";
-                        for(const std::string &str: it->enabledVMSizes) {
-                            regex += str + '|';
-                        }
-                        regex.pop_back();
-                        regex += ")";
-
-                        if()
-                    }
                 }
             }
+        }
+        return azLocations;
+    }
 
-            if(azLocations.empty()) {
-                std::cout << "No locations found for your required position... Setting your setup to defaults" << std::endl;
-                return "DEFAULT_OVERRIDE";
-            } else {
+    std::string GenericAzureResource::getLocation() {
+        return this->location;
+    }
 
+    std::string GenericAzureResource::getAvailabilityZoneFromString(std::string zone, std::string currentType) {
+        std::vector<Generics::AZLocation> azLocations = this->getAZs();
+        if(azLocations.empty()) {
+            std::cout << "No locations found for your required position... Setting your setup to defaults" << std::endl;
+            return "DEFAULT_OVERRIDE";
+        } else {
             auto *oma = new EOPSTemplateEngine::Helpers::HTTP::OpenMapsAPI();
             EOPSTemplateEngine::Helpers::HTTP::GetCoordsFromQueryResponse res = oma->getCoordsFromQuery(zone);
             
@@ -87,7 +86,6 @@ namespace EOPSTemplateEngine::Azure {
             int index = Helpers::HelperFunctions::getClosestRegionPerCoordinates(res.lat, res.lon, latLongs);
             std::string returnString = azLocations[index].zone;
             return returnString;
-            }
         }
     }
 }
