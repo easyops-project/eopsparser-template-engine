@@ -15,3 +15,7 @@ void EOPSTemplateEngine::Azure::Compute::HardwareProfile::setVMSize(std::string 
     this->vmSize = std::move(size);
 }
 
+std::string EOPSTemplateEngine::Azure::Compute::HardwareProfile::getVMSize(){
+    return this->vmSize;
+}
+

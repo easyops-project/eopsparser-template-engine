@@ -18,7 +18,7 @@ namespace EOPSTemplateEngine::Azure::Compute {
         void setOs(std::string &os);
         std::vector<Generics::AZLocation> getAZs() override;
     public:
-        explicit VirtualMachine(std::string &name, std::string &resourceType, std::string &location);
+        explicit VirtualMachine(std::string &name, std::string &resourceType);
 
         void setFromParsedResource(
                 EOPSNativeLib::Models::VirtualMachine *res);

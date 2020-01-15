@@ -62,7 +62,7 @@ namespace EOPSTemplateEngine::AWS::EC2 {
 
         void setImageIdFromOsName(std::string osName);
 
-        void setInstanceTypeFromSpec(int cores, float ram, const std::string &optimisation, bool needsGPU);
+        void setInstanceTypeFromSpec(float cores, float ram, const std::string &optimisation, bool needsGPU);
 
     public:
         explicit Instance(std::string &name);

@@ -11,8 +11,7 @@
 using Json = nlohmann::json;
 
 namespace EOPSTemplateEngine::Azure::Compute {
-    VirtualMachine::VirtualMachine(std::string &name, std::string &resourceType, std::string &location)
-            : GenericAzureResource(name, resourceType, location) {
+    VirtualMachine::VirtualMachine(std::string &name, std::string &resourceType): GenericAzureResource(name, resourceType) {
         this->storageProfile = new StorageProfile();
         this->hardwareProfile = new HardwareProfile();
     }
@@ -55,7 +54,8 @@ namespace EOPSTemplateEngine::Azure::Compute {
                 if (instance.isGPUEnabled) {
                     continue;
                 }
-                if (instance.cpu >= float(cpu) && instance.ram >= ram) {
+
+                if (instance.cpu >= cpu && instance.ram >= ram) {
                     chosenInstance->cpu = instance.cpu;
                     chosenInstance->ram = instance.ram;
                     chosenInstance->name = instance.name;
@@ -74,7 +74,7 @@ namespace EOPSTemplateEngine::Azure::Compute {
                           << " GB Ram " << std::endl;
             }
         } else {
-            std::cout << "Error opening the json file. Creating t2.micro instance."
+            std::cout << "Error opening the json file. Creating Standard_B1ls instance."
                       << std::endl;
             auto *errorInstance = new Generics::InstanceType();
             errorInstance->name = "Standard_B1ls";
@@ -85,8 +85,9 @@ namespace EOPSTemplateEngine::Azure::Compute {
     }
 
     std::vector<Generics::AZLocation> VirtualMachine::getAZs() {
-        std::vector<Generics::AZLocation> azLocations;
         std::ifstream jsonFile;
+        std::string type = this->getType();
+
         jsonFile.open(AZURE_AVAILABILITY_ZONES);
 
         if(jsonFile.is_open()) {
@@ -95,7 +96,7 @@ namespace EOPSTemplateEngine::Azure::Compute {
 
             for(auto it = azLocations.begin(); it != azLocations.end(); ++it){
                 std::vector<std::string> v = it->availableResources;
-                if(std::find(v.begin(), v.end(), this->getType()) == v.end()) {
+                if(std::find(v.begin(), v.end(), type) == v.end()) {
                     it = azLocations.erase(it);
                     --it;
                 } else {
@@ -108,9 +109,7 @@ namespace EOPSTemplateEngine::Azure::Compute {
                         regexBuilder += ")";
 
                         std::regex r{regexBuilder};
-                        std::smatch s;
-
-                        if(!std::regex_match(this->getType(), r)) {
+                        if(!std::regex_match(this->hardwareProfile->getVMSize(), r)) {
                             it = azLocations.erase(it);
                             --it;
                         }
@@ -128,13 +127,9 @@ namespace EOPSTemplateEngine::Azure::Compute {
         if (!res->GPUs.empty()) {
             optimisation = "GPU";
         }
-        
-        if(this->getLocation() != "DEFAULT_OVERRIDE") this->setInstanceType(res->OS, res->Cores, res->Ram, optimisation);
-        else {
-            optimisation = "COST";
-            this->setInstanceType(res->OS, 1.0, 1.0, optimisation);
-        }
 
+        this->setInstanceType(res->OS, res->Cores, res->Ram, optimisation);
+        this->setLocation(res->Location);
         this->setOs(res->OS);
     }
 

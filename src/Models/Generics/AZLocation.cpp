@@ -11,7 +11,7 @@ namespace EOPSTemplateEngine::Generics {
             std::vector<std::string> s;
             j.at("enabledVMSizes").get_to<std::vector<std::string>>(s);
 
-            a.availableResources = s;
+            a.enabledVMSizes = s;
         }
     }
 }

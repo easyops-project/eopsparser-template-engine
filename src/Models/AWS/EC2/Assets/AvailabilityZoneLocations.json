@@ -32,25 +32,9 @@
         ]
     },
     {
-        "zone": "ap-east-1",
-        "lat": 22.2793278,
-        "lon": 114.1628131,
-        "availableResources": [
-            "AWS::EC2::Instance"
-        ]
-    },
-    {
         "zone": "ap-south-1",
         "lat": 18.9387711,
         "lon": 72.8353355,
-        "availableResources": [
-            "AWS::EC2::Instance"
-        ]
-    },
-    {
-        "zone": "ap-northeast-3",
-        "lat": 34.6198813,
-        "lon": 135.490357,
         "availableResources": [
             "AWS::EC2::Instance"
         ]
@@ -131,14 +115,6 @@
         "zone": "eu-north-1",
         "lat": 59.3251172,
         "lon": 18.0710935,
-        "availableResources": [
-            "AWS::EC2::Instance"
-        ]
-    },
-    {
-        "zone": "me-south-1",
-        "lat": 26.1551249,
-        "lon": 50.5344606,
         "availableResources": [
             "AWS::EC2::Instance"
         ]

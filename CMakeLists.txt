@@ -26,6 +26,7 @@ target_link_libraries(${PROJECT_NAME} ${CURL_LIBRARIES})
 #aws
 add_definitions("-DAWS_INSTANCES=\"${CMAKE_SOURCE_DIR}/src/Models/AWS/EC2/Assets/InstanceType.json\"")
 add_definitions("-DAWS_AVAILABILITY_ZONES=\"${CMAKE_SOURCE_DIR}/src/Models/AWS/EC2/Assets/AvailabilityZoneLocations.json\"")
+add_definitions("-DAWS_OS_AMI_CACHE=\"${CMAKE_SOURCE_DIR}/src/Models/AWS/EC2/Assets/AwsOSAMICache.json\"")
 
 #azure
 add_definitions("-DAZURE_WINDOWS_INSTANCES=\"${CMAKE_SOURCE_DIR}/src/Models/Azure/Compute/Assets/WindowsInstanceType.json\"")

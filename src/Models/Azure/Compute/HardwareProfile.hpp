@@ -12,6 +12,7 @@ namespace EOPSTemplateEngine::Azure::Compute {
         Json ToJson() override;
 
         void setVMSize(std::string size);
+        std::string getVMSize();
     };
 }
 

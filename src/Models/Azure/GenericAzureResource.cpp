@@ -24,10 +24,9 @@ namespace EOPSTemplateEngine::Azure {
         this->location = loc;
     }
 
-    GenericAzureResource::GenericAzureResource(std::string &name, std::string &resourceType, std::string &location) {
+    GenericAzureResource::GenericAzureResource(std::string &name, std::string &resourceType) {
         this->name = name;
         this->setType(resourceType);
-        this->setLocation(location);
     }
 
     std::string GenericAzureResource::getType() {

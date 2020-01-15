@@ -9,7 +9,7 @@ namespace EOPSTemplateEngine::Azure {
 
     void AzureResourceManagerTemplate::AddResource(EOPSNativeLib::Models::Resource *resource) {
         if (resource->Type == "Virtual_Machine") {
-            auto *vm = new Compute::VirtualMachine(resource->Name, resource->Type, resource->Location);
+            auto *vm = new Compute::VirtualMachine(resource->Name, resource->Type);
             vm->setFromParsedResource(dynamic_cast<EOPSNativeLib::Models::VirtualMachine *>(resource));
             this->AddResource(vm);
         }

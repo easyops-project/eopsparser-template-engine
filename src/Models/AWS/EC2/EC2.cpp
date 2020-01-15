@@ -2,10 +2,10 @@
 #include "../../Generics/InstanceType.hpp"
 #include <fstream>
 #include <iostream>
+#include "../../../Helpers/helperFunctions.hpp"
 
 namespace EOPSTemplateEngine::AWS::EC2 {
     Instance::Instance(std::string &name) : GenericAWSResource("AWS::EC2::Instance") {
-        this->CpuOptions = *new CpuOption();
         Tag t;
         t.Key = "Name";
         t.Value = name;
@@ -35,12 +35,104 @@ namespace EOPSTemplateEngine::AWS::EC2 {
     }
 
     void Instance::setImageIdFromOsName(std::string osName) {
-//        Aws::EC2::EC2Client ec2;
+        std::ifstream file;
+        file.open(AWS_OS_AMI_CACHE);
 
+        if(file.is_open()) {
+            Json j = Json::parse(file);
+            file.close();
+            std::transform(osName.begin(), osName.end(), osName.begin(), ::tolower);
 
+            if(osName.find("ubuntu") != std::string::npos) {
+                if(osName.find('@')) {
+                    std::vector<std::string> split = Helpers::HelperFunctions::splitStringByDelimiter(osName, '@');
+
+                    std::string version = split[1];
+                    if (version.rfind("19", 0) == 0) {
+                        this->ImageId = j.at("ubuntu1904").at(this->AvailabilityZone);
+                    } else if (version.rfind("18", 0) == 0) {
+                        this->ImageId = j.at("ubuntu1804").at(this->AvailabilityZone);
+                    } else if (version.rfind("16", 0) == 0) {
+                        this->ImageId = j.at("ubuntu1604").at(this->AvailabilityZone);
+                    } else if (version.rfind("14", 0) == 0) {
+                        this->ImageId = j.at("ubuntu1404").at(this->AvailabilityZone);  
+                    } else if (version.rfind("12", 0) == 0) {
+                        this->ImageId = j.at("ubuntu1204").at(this->AvailabilityZone);
+                    } else {
+                        this->ImageId = j.at("ubuntu1904").at(this->AvailabilityZone);
+                    }
+
+                    if(this->ImageId == "") {
+                        std::cout << "Ubuntu " << version << " is not available in this region. Setting to 18.04..." << std::endl;
+                        this->ImageId = j.at("ubuntu1904").at(this->AvailabilityZone);
+                    }
+                } else {
+                    this->ImageId = j.at("ubuntu1904").at(this->AvailabilityZone);
+                }
+            } else if(osName.find("rhel") != std::string::npos) {
+                this->ImageId = j.at("rhel").at(this->AvailabilityZone);
+            } else if(osName.find("freebsd") != std::string::npos) {
+                this->ImageId = j.at("freebsd11").at(this->AvailabilityZone);
+
+                if(this->ImageId == "") {
+                    std::cout << "FreeBSD is not available in this region. Setting to amazon os..." << std::endl;
+                    this->ImageId = j.at("amazon2").at(this->AvailabilityZone);
+                }
+            } else if(osName.find("centos") != std::string::npos) {
+                if(osName.find('@')) {
+                    std::vector<std::string> split = Helpers::HelperFunctions::splitStringByDelimiter(osName, '@');
+
+                    std::string version = split[1];
+                    if (version.rfind("7", 0) == 0) {
+                        this->ImageId = j.at("centos7").at(this->AvailabilityZone);
+                    } else if (version.rfind("6", 0) == 0) {
+                        this->ImageId = j.at("centos6").at(this->AvailabilityZone);
+                    } else {
+                        this->ImageId = j.at("centos7").at(this->AvailabilityZone);
+                    }
+
+                    if(this->ImageId == "") {
+                        std::cout << "CentOS " << version << " is not available in this region. Setting to Amazon Linux..." << std::endl;
+                        this->ImageId = j.at("amazon").at(this->AvailabilityZone);
+                    }
+                } else {
+                    this->ImageId = j.at("ubuntu1904").at(this->AvailabilityZone);
+                }
+            } else if(osName.find("amazon2") != std::string::npos) {
+                this->ImageId = j.at("amazon2").at(this->AvailabilityZone);
+            } else if(osName.find("amazon") != std::string::npos) {
+                this->ImageId = j.at("amazon").at(this->AvailabilityZone);
+            } else if(osName.find("windows") != std::string::npos) {
+                if(osName.find('@')) {
+                    std::vector<std::string> split = Helpers::HelperFunctions::splitStringByDelimiter(osName, '@');
+
+                    std::string version = split[1];
+                    if (version.rfind("2019", 0) == 0 || version.rfind("19", 0) == 0) {
+                        this->ImageId = j.at("windows2019").at(this->AvailabilityZone);
+                    } else if (version.rfind("2016", 0) == 0 || version.rfind("16", 0) == 0) {
+                        this->ImageId = j.at("windows2016").at(this->AvailabilityZone);
+                    } else if (version.rfind("2012r2", 0) == 0 || version.rfind("12r2", 0) == 0 || version.rfind("2012 r2", 0) == 0 || version.rfind("12 r2", 0) == 0) {
+                        this->ImageId = j.at("windows2012R2").at(this->AvailabilityZone);
+                    } else if (version.rfind("2012", 0) == 0 || version.rfind("12", 0) == 0) {
+                        this->ImageId = j.at("windows2012").at(this->AvailabilityZone);
+                    } else {
+                        this->ImageId = j.at("windows2019").at(this->AvailabilityZone);
+                    }
+
+                    if(this->ImageId == "") {
+                        std::cout << "Windows " << version << " is not available in this region. Setting to Windows Server 2019..." << std::endl;
+                        this->ImageId = j.at("windows2019").at(this->AvailabilityZone);
+                    }
+                } else {
+                    this->ImageId = j.at("ubuntu1904").at(this->AvailabilityZone);
+                }
+            } else {
+                this->ImageId = "ami-071f4ce599deff521";
+            }
+        }
     }
 
-    void Instance::setInstanceTypeFromSpec(int cores, float ram,
+    void Instance::setInstanceTypeFromSpec(float cores, float ram,
                                            const std::string &optimisation, bool needsGPU) {
         // TODO: Consider how to pick most cost effective instances etc. May need
         // extra fields for internet etc.
@@ -116,7 +208,7 @@ namespace EOPSTemplateEngine::AWS::EC2 {
         Json j = GenericAWSResource::ToJson();
         Json properties = Json::object();
 
-        if (this->CpuOptions.CoreCount != 0 || this->CpuOptions.ThreadsPerCore != 0) {
+        if (this->CpuOptions.CoreCount != 0) {
             properties["CPUOptions"] = this->CpuOptions.ToJson();
         }
 
@@ -129,7 +221,7 @@ namespace EOPSTemplateEngine::AWS::EC2 {
             }
             properties["ElasticGpuSpecifications"] = gpus;
         }
-//        j["ImageId"] = this->ImageId;
+        properties["ImageId"] = this->ImageId;
         properties["InstanceType"] = this->InstanceType;
 //        j["KeyName"] = this->KeyName;
         properties["Monitoring"] = this->Monitoring;

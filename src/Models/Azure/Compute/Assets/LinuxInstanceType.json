@@ -667,26 +667,6 @@
       "name": "Standard_NV48s_v3",
       "cpu": 48.0,
       "ram": 448.0
-    },
-    {
-      "name": "Standard_NV4as_v4",
-      "cpu": 4.0,
-      "ram": 14.0
-    },
-    {
-      "name": "Standard_NV8as_v4",
-      "cpu": 8.0,
-      "ram": 28.0
-    },
-    {
-      "name": "Standard_NV16as_v4",
-      "cpu": 16.0,
-      "ram": 56.0
-    },
-    {
-      "name": "Standard_NV32as_v4",
-      "cpu": 32.0,
-      "ram": 112.0
     }
   ]
 }
