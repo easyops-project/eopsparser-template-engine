@@ -1,13 +1,12 @@
 {
-  "name": "eopsparser-template-engine",
-  "version": "1.0.0",
+  "name": "@alanj1998/easyops-template-engine",
+  "version": "1.0.1",
   "description": "Templating engine which translates parser output into corresponding cloud templates.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cmake-js compile",
-    "prebuild": "cmake-js build",
-    "postinstall": "npx cmake-js"
+    "build": "npx cmake-js clean && npx cmake-js build",
+    "prepublish": "yarn build"
   },
   "repository": {
     "type": "git",
@@ -21,8 +20,8 @@
   },
   "homepage": "https://github.com/alanj1998/eopsparser-template-engine#readme",
   "devDependencies": {
-    "glob": "^7.1.4",
-    "cmake-js": "^6.0.0"
+    "cmake-js": "^6.0.0",
+    "glob": "^7.1.4"
   },
   "dependencies": {
     "node-addon-api": "^1.7.1"
