@@ -11,6 +11,10 @@ namespace EOPSTemplateEngine::AWS::EC2 {
         t.Value = name;
 
         this->Tags.push_back(t);
+
+        this->CpuOptions = new CpuOption();
+        this->CpuOptions->ThreadsPerCore = 0;
+        this->CpuOptions->CoreCount = 0;
     }
 
     void Instance::setAvailabilityZoneFromString(std::string zone) {
@@ -187,7 +191,7 @@ namespace EOPSTemplateEngine::AWS::EC2 {
             c->CoreCount = cores;
             c->ThreadsPerCore = 1;
 
-            this->CpuOptions = *c;
+            this->CpuOptions = c;
         }
     }
 
@@ -208,8 +212,8 @@ namespace EOPSTemplateEngine::AWS::EC2 {
         Json j = GenericAWSResource::ToJson();
         Json properties = Json::object();
 
-        if (this->CpuOptions.CoreCount != 0) {
-            properties["CPUOptions"] = this->CpuOptions.ToJson();
+        if (this->CpuOptions->CoreCount != 0 && this->CpuOptions->ThreadsPerCore != 0) {
+            properties["CPUOptions"] = this->CpuOptions->ToJson();
         }
 
         if (!this->ElasticGpuSpecifications.empty()) {

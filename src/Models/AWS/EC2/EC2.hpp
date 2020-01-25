@@ -39,7 +39,7 @@ namespace EOPSTemplateEngine::AWS::EC2 {
           */
 
         std::string AvailabilityZone; // check based on allowed values is needed here
-        CpuOption CpuOptions;
+        CpuOption *CpuOptions;
         std::vector<ElasticGPUAccelerator> ElasticGpuSpecifications;
         std::string ImageId; // need to do a check. look that bad boy up.
         std::string
