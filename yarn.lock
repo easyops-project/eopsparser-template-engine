@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+"@alanj1998/easyops-template-engine@^1.0.1":
+  version "1.0.1"
+  resolved "https://npm.pkg.github.com/download/@alanj1998/easyops-template-engine/1.0.1/4101aa9271b737bec816083194bd923df1df329101c5e57bd08aa90249e19a00#2ab322fc0de316be931247ec3ee2f4f4bdb008a3"
+  integrity sha512-5YEZjBRL8FV0x8/x0GugeJO+qNvq33Vf6vi/9uNUEYI7fbnksIcXSRmsOvQ90Ab+11/A0A6uFfxgWt2eDtb26w==
+  dependencies:
+    node-addon-api "^1.7.1"
+
 ajv@^6.5.5:
   version "6.10.2"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.10.2.tgz#d3cea04d6b017b2894ad69040fec8b623eb4bd52"

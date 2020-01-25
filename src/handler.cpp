@@ -8,5 +8,4 @@ Napi::Object InitAll(Napi::Env env, Napi::Object exports) {
 }
 
 // Register the module as node module
-NODE_API_MODULE(eopstemplateengine, InitAll
-);
+NODE_API_MODULE(eopstemplateengine, InitAll);

@@ -20,7 +20,6 @@ namespace EOPSTemplateEngine::AWS {
         std::string Type = "";
         std::vector<std::string> DependsOn;
 
-
     public:
         GenericAWSResource();
 
