@@ -1,6 +1,6 @@
 {
   "name": "@alanj1998/easyops-template-engine",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Templating engine which translates parser output into corresponding cloud templates.",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,6 @@
     "type": "git",
     "url": "git+https://github.com/alanj1998/eopsparser-template-engine.git"
   },
-  "gypfile": true,
   "author": "Alan Jachimczak",
   "license": "ISC",
   "bugs": {
