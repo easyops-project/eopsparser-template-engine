@@ -1,3 +1,3 @@
-const CreateTemplate = require("./build/Release/eopstemplateengine.node").CreateTemplate;
+const CreateTemplate = require("./build/Release/wrapped.node").CreateTemplate;
 
 module.exports.CreateTemplate = CreateTemplate;

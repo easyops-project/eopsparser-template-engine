@@ -1,7 +1,8 @@
 #include "OpenMapAPI.hpp"
-#include <curl/curl.h>
 #include <iostream>
+#define CPPHTTPLIB_OPENSSL_SUPPORT  
 
+#include <http/http.h>
 namespace EOPSTemplateEngine::Helpers::HTTP {
     void from_json(const Json &j, GetCoordsFromQueryResponse &r) {
         r.display_name = j.at("display_name");
@@ -16,24 +17,15 @@ namespace EOPSTemplateEngine::Helpers::HTTP {
     }
 
     GetCoordsFromQueryResponse &OpenMapsAPI::getCoordsFromQuery(std::string query) {
-        const std::string url("https://nominatim.openstreetmap.org/search?format=json&q=" + query);
-        long httpCode(0);
-        std::string data;
-        CURL *curl = curl_easy_init();
-
-        curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
-        curl_easy_setopt(curl, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
-        curl_easy_setopt(curl, CURLOPT_TIMEOUT, 10);
-        curl_easy_setopt(curl, CURLOPT_USERAGENT, "EasyOPS Template Engine");
-        curl_easy_setopt(curl, CURLOPT_WRITEDATA, &data);
-        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, OpenMapsAPI::WriteCallback);
+        const std::string url("nominatim.openstreetmap.org"); 
+        httplib::SSLClient cli(url);
         
-        curl_easy_perform(curl);
-        curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &httpCode);
-        curl_easy_cleanup(curl);
+        std::string path = "/search?format=json&q=" + query;
+        const char *newPath = path.c_str();
+        auto res = cli.Get(newPath);
 
-        if(httpCode == 200) {
-            std::vector<GetCoordsFromQueryResponse> foundCoords = Json::parse(data);
+        if(res->status == 200) {
+            std::vector<GetCoordsFromQueryResponse> foundCoords = Json::parse(res->body);
             GetCoordsFromQueryResponse *r = new GetCoordsFromQueryResponse();
             r->lat = foundCoords[0].lat;
             r->lon = foundCoords[0].lon;
