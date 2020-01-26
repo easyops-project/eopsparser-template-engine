@@ -1,12 +1,12 @@
 {
   "name": "@alanj1998/easyops-template-engine",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Templating engine which translates parser output into corresponding cloud templates.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx cmake-js clean && npx cmake-js build",
-    "prepublish": "yarn build && cp lib/curl/libcurl.so.4 ./build/Release/libcurl.so.4"
+    "prepublish": "yarn build"
   },
   "repository": {
     "type": "git",
