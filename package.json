@@ -1,6 +1,6 @@
 {
   "name": "@alanj1998/easyops-template-engine",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Templating engine which translates parser output into corresponding cloud templates.",
   "main": "index.js",
   "scripts": {
