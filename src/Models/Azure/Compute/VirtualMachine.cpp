@@ -68,10 +68,6 @@ namespace EOPSTemplateEngine::Azure::Compute {
                 std::cout << "Did not find a match...";
                 std::cout << "Using: " << instanceTypes[0].name << std::endl;
                 chosenInstance = &instanceTypes[0];
-            } else {
-                std::cout << "Chosen type: \n- " << chosenInstance->name << " \n- "
-                          << chosenInstance->cpu << " cpus \n- " << chosenInstance->ram
-                          << " GB Ram " << std::endl;
             }
         } else {
             std::cout << "Error opening the json file. Creating Standard_B1ls instance."

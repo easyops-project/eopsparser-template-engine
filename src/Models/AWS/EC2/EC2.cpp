@@ -171,11 +171,7 @@ namespace EOPSTemplateEngine::AWS::EC2 {
                 chosenInstance->cpu = instanceTypes[0].cpu;
                 chosenInstance->ram = instanceTypes[0].ram;
                 chosenInstance->name = instanceTypes[0].name;
-            } else {
-                std::cout << "Chosen type: \n- " << chosenInstance->name << " \n- "
-                          << chosenInstance->cpu << " cpus \n- " << chosenInstance->ram
-                          << " GB Ram " << std::endl;
-            }
+            } 
         } else {
             std::cout << "Error opening the json file. Creating t2.micro instance."
                       << std::endl;
