@@ -58,6 +58,7 @@ string(REPLACE "\"" "" NODE_ADDON_API_DIR ${NODE_ADDON_API_DIR})
 target_include_directories(${PROJECT_NAME} PRIVATE ${NODE_ADDON_API_DIR})
 
 add_library(wrapped SHARED src/handler.cpp)
+set_property(TARGET wrapped PROPERTY CXX_STANDARD 17)
 target_link_libraries(wrapped ${PROJECT_NAME})
 target_link_libraries(wrapped ${CMAKE_JS_LIB}) # link the CMAKEJSLIB
 target_include_directories(wrapped PRIVATE ${CMAKE_SOURCE_DIR}/node_modules/node-addon-api ${CMAKE_JS_INC}) # include node addon api and js
