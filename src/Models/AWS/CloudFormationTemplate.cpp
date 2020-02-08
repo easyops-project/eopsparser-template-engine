@@ -52,7 +52,7 @@ namespace EOPSTemplateEngine::AWS {
             g->Description = "IP Address of " + resource->Name;
             g->Value = "!GetAtt " + resource->Name + ".PublicIp";
 
-            this->AddOutput(resource->Name + "-ip", g);
+            this->AddOutput(resource->Name + "ip", g);
         }
     }
 

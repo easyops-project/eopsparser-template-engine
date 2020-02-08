@@ -17,9 +17,8 @@ namespace EOPSTemplateEngine::AWS::EC2 {
         this->CpuOptions->CoreCount = 0;
     }
 
-    void Instance::setAvailabilityZoneFromString(std::string zone) {
+    void Instance::setAvailabilityZoneFromString(std::string zone) { 
         std::string aZone = this->getAvailabilityZoneFromString(zone);
-
         this->AvailabilityZone = aZone;
     }
 
@@ -225,7 +224,7 @@ namespace EOPSTemplateEngine::AWS::EC2 {
         properties["InstanceType"] = this->InstanceType;
 //        j["KeyName"] = this->KeyName;
         properties["Monitoring"] = this->Monitoring;
-        properties["AvailabilityZone"] = this->AvailabilityZone;
+        properties["AvailabilityZone"] = this->AvailabilityZone + "a";
 //        j["SubnetId"] = this->SubnetId;
         //        j["Tags"] = tags;
 //        j["UserData"] = this->UserData;
