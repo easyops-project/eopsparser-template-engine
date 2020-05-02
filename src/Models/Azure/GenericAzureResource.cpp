@@ -42,7 +42,6 @@ namespace EOPSTemplateEngine::Azure {
     }
 
     std::vector<Generics::AZLocation> GenericAzureResource::getAZs() {
-        std::cout << "Le default run" << std::endl;
         std::vector<Generics::AZLocation> azLocations;
         std::ifstream jsonFile;
         jsonFile.open(AZURE_AVAILABILITY_ZONES);
